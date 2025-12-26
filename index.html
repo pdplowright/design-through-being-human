@@ -88,45 +88,64 @@
         a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
         a:hover { background-color: var(--accent); color: white; text-decoration: none; }
 
-/* HEADER GRID LAYOUT */
+/* HEADER GRID SYSTEM */
 .header-grid {
     display: grid;
-    grid-template-columns: 1fr auto; /* Left column takes space, Right column fits image */
-    grid-template-areas: 
-        "title image"
-        "subtitle subtitle";
-    align-items: center; /* Aligns title and image vertically centered */
-    gap: 1rem 3rem;      /* 1rem gap vertically, 3rem gap horizontally */
-    margin-top: 2rem;
+    /* Two columns: Left takes available space, Right fits to image size */
+    grid-template-columns: 1fr auto; 
+    /* Two rows: Auto height based on content */
+    grid-template-rows: auto auto;   
+    gap: 1rem 3rem;  /* Gap between rows (1rem) and columns (3rem) */
+    align-items: center; /* Vertically centers the Title relative to the Image */
 }
 
-/* Assigning the HTML parts to the Grid Areas */
-.header-title-area { 
-    grid-area: title; 
+.header-title {
+    /* Places Title in Column 1, Row 1 */
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0; /* Removes default spacing to ensure alignment */
+    line-height: 1.1;
 }
 
-.header-image-area { 
-    grid-area: image; 
-}
-
-.header-image-area img {
-    max-width: 250px;    /* Control the image size */
+.header-image {
+    /* Places Image in Column 2, Row 1 */
+    grid-column: 2;
+    grid-row: 1;
+    max-width: 250px; /* Adjust this number to change image size */
     height: auto;
-    display: block;      /* Prevents tiny gaps below image */
 }
 
-.header-subtitle-area { 
-    grid-area: subtitle;
-    margin-top: 0.5rem;  
+.header-subtitle {
+    /* Places Subtitle in Row 2, spanning ALL columns */
+    grid-column: 1 / span 2; 
+    grid-row: 2;
+    
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    margin-top: 0.5rem;
 }
 
-.subtitle {
-    font-size: 1.5rem; 
-    color: var(--text-muted); 
-    font-weight: 300; 
-    line-height: 1.4;
+/* MOBILE ADJUSTMENT (Stacks everything vertically on phones) */
+@media (max-width: 768px) {
+    .header-grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 1.5rem;
+        text-align: left;
+    }
+    
+    .header-image {
+        grid-column: 1;
+        grid-row: 2; /* Moves image below title on phone */
+        max-width: 120px;
+    }
+    
+    .header-subtitle {
+        grid-column: 1;
+        grid-row: 3;
+    }
 }
-
+        
 /* MOBILE FIX: Stack them vertically on small screens */
 @media (max-width: 768px) {
     .header-grid {
@@ -209,16 +228,12 @@
     </nav>
     
     <div class="header-grid">
-        <div class="header-title-area">
-            <h1>Design Through<br>Being Human.</h1>
-        </div>
-
-        <div class="header-image-area">
-            <img src="assets/landing-human-sm.jpg" alt="Remember what we are designing for">
-        </div>
-
-        <div class="header-subtitle-area">
-            <span class="subtitle">A cognitive framework for architecture, urbanism, and the algorithmic environment.</span>
+        <h1 class="header-title">Design Through<br>Being Human.</h1>
+        
+        <img src="assets/landing-human-sm-jpg" alt="Cognitive Diagram" class="header-image">
+        
+        <div class="header-subtitle">
+            A cognitive framework for architecture, urbanism, and the algorithmic environment.
         </div>
     </div>
 </header>
@@ -344,6 +359,7 @@
 
 </body>
 </html>
+
 
 
 
