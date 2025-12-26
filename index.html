@@ -102,28 +102,9 @@
         align-items: center; 
         margin-top: 2rem;
     }
-
-    .header-title {
-        grid-column: 1;
-        grid-row: 1;
-        margin: 0;
-    }
-
-    .header-image {
-        grid-column: 2;
-        grid-row: 1;
-        max-width: 250px; 
-        height: auto;
-    }
-
-    .header-subtitle {
-        grid-column: 1 / span 2; /* Spans full width below */
-        grid-row: 2;
-        font-size: 1.5rem;
-        color: var(--text-muted);
-        font-weight: 300;
-        margin-top: 0.5rem;
-    }
+/* HEADER */
+        header { padding: 4rem 0; border-bottom: 4px solid var(--accent); }
+        .subtitle { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; display: block; margin-top: 1rem; }
 
     /* FRAMEWORKS & BOOKS */
     .framework-grid {
@@ -187,22 +168,14 @@
 <body>
 
 <header>
-    <nav style="margin-bottom: 2rem; font-size: 0.9rem; text-transform: uppercase; font-weight: 700;">
-        <a href="#frameworks" style="margin-right: 20px;">The Frameworks</a>
-        <a href="#publications" style="margin-right: 20px;">Publications</a>
-        <a href="#about">About</a>
-    </nav>
-    
-    <div class="header-grid">
-        <h1 class="header-title">Design Through<br>Being Human.</h1>
-        
-        <img src="assets/landing-human-sm.jpg" alt="Why we do this." class="header-image">
-        
-        <div class="header-subtitle">
-            A cognitive framework for architecture, urbanism, and the algorithmic environment.
-        </div>
-    </div>
-</header>
+        <nav style="margin-bottom: 2rem; font-size: 0.9rem; text-transform: uppercase; font-weight: 700;">
+            <a href="#frameworks" style="margin-right: 20px;">The Frameworks</a>
+            <a href="#publications" style="margin-right: 20px;">Publications</a>
+            <a href="#about">About</a>
+        </nav>
+        <h1>Design Through<br>Being Human.</h1>
+        <span class="subtitle">A cognitive framework for architecture, urbanism, and the algorithmic environment.</span>
+    </header>
 
     <main>
         <section style="margin-top: 4rem;">
@@ -325,6 +298,7 @@
 
 </body>
 </html>
+
 
 
 
