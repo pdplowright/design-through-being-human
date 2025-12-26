@@ -88,27 +88,63 @@
         a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
         a:hover { background-color: var(--accent); color: white; text-decoration: none; }
 
-/* HEADER LAYOUT - TITLE & IMAGE ROW */
-.header-title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start; /* This ensures the image aligns with the TOP of the title */
-    gap: 2rem;
-    margin-bottom: 1rem; /* Space between title/image and the subtitle */
+/* HEADER GRID LAYOUT */
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Left column takes space, Right column fits image */
+    grid-template-areas: 
+        "title image"
+        "subtitle subtitle";
+    align-items: center; /* Aligns title and image vertically centered */
+    gap: 1rem 3rem;      /* 1rem gap vertically, 3rem gap horizontally */
+    margin-top: 2rem;
 }
 
-.header-image {
-    max-width: 250px;     /* Slightly smaller so it doesn't overpower the H1 */
+/* Assigning the HTML parts to the Grid Areas */
+.header-title-area { 
+    grid-area: title; 
+}
+
+.header-image-area { 
+    grid-area: image; 
+}
+
+.header-image-area img {
+    max-width: 250px;    /* Control the image size */
     height: auto;
-    margin-top: 10px;     /* Optical adjustment to align perfectly with the first line of text */
+    display: block;      /* Prevents tiny gaps below image */
+}
+
+.header-subtitle-area { 
+    grid-area: subtitle;
+    margin-top: 0.5rem;  
 }
 
 .subtitle {
     font-size: 1.5rem; 
     color: var(--text-muted); 
     font-weight: 300; 
-    display: block; 
-    max-width: 800px;     /* Keeps the reading line comfortable */
+    line-height: 1.4;
+}
+
+/* MOBILE FIX: Stack them vertically on small screens */
+@media (max-width: 768px) {
+    .header-grid {
+        grid-template-columns: 1fr; /* Single column */
+        grid-template-areas: 
+            "image" 
+            "title"
+            "subtitle";
+        gap: 1.5rem;
+    }
+    
+    .header-image-area {
+        justify-self: start; /* Aligns image to left on mobile */
+    }
+    
+    .header-image-area img {
+        max-width: 120px;    /* Smaller image on mobile */
+    }
 }
 
 /* RESPONSIVE: Stack them on mobile */
@@ -172,13 +208,19 @@
         <a href="#about">About</a>
     </nav>
     
-    <div class="header-title-row">
-        <h1>Design Through<br>Being Human.</h1>
-        
-        <img src="assets/landing-human-sm.jpg" alt="Cognitive Framework Diagram" class="header-image">
+    <div class="header-grid">
+        <div class="header-title-area">
+            <h1>Design Through<br>Being Human.</h1>
+        </div>
+
+        <div class="header-image-area">
+            <img src="assets/header-diagram.png" alt="Cognitive Framework Diagram">
+        </div>
+
+        <div class="header-subtitle-area">
+            <span class="subtitle">A cognitive framework for architecture, urbanism, and the algorithmic environment.</span>
+        </div>
     </div>
-    
-    <span class="subtitle">A cognitive framework for architecture, urbanism, and the algorithmic environment.</span>
 </header>
 
     <main>
@@ -302,6 +344,7 @@
 
 </body>
 </html>
+
 
 
 
