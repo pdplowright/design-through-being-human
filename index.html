@@ -88,9 +88,41 @@
         a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
         a:hover { background-color: var(--accent); color: white; text-decoration: none; }
 
-        /* HEADER */
-        header { padding: 4rem 0; border-bottom: 4px solid var(--accent); }
-        .subtitle { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; display: block; margin-top: 1rem; }
+/* HEADER LAYOUT - TITLE & IMAGE ROW */
+.header-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* This ensures the image aligns with the TOP of the title */
+    gap: 2rem;
+    margin-bottom: 1rem; /* Space between title/image and the subtitle */
+}
+
+.header-image {
+    max-width: 250px;     /* Slightly smaller so it doesn't overpower the H1 */
+    height: auto;
+    margin-top: 10px;     /* Optical adjustment to align perfectly with the first line of text */
+}
+
+.subtitle {
+    font-size: 1.5rem; 
+    color: var(--text-muted); 
+    font-weight: 300; 
+    display: block; 
+    max-width: 800px;     /* Keeps the reading line comfortable */
+}
+
+/* RESPONSIVE: Stack them on mobile */
+@media (max-width: 768px) {
+    .header-title-row {
+        flex-direction: column-reverse; /* Puts image ABOVE title on mobile? Or use 'column' for below */
+        align-items: flex-start;
+    }
+    .header-image {
+        max-width: 100px;      /* Smaller icon on phones */
+        margin-bottom: 1rem;
+        margin-top: 0;
+    }
+}
 
         /* GRID LAYOUTS */
         .framework-grid {
@@ -140,14 +172,13 @@
         <a href="#about">About</a>
     </nav>
     
-    <div class="header-layout">
-        <div class="header-text">
-            <h1>Design Through<br>Being Human.</h1>
-            <span class="subtitle">A cognitive framework for architecture, urbanism, and the algorithmic environment.</span>
-        </div>
+    <div class="header-title-row">
+        <h1>Design Through<br>Being Human.</h1>
         
-        <img src="assets/landing-human-sm.jpg" alt="Cognitive Framework Diagram" class="header-image">
+        <img src="assets/header-diagram.png" alt="Cognitive Framework Diagram" class="header-image">
     </div>
+    
+    <span class="subtitle">A cognitive framework for architecture, urbanism, and the algorithmic environment.</span>
 </header>
 
     <main>
@@ -271,6 +302,7 @@
 
 </body>
 </html>
+
 
 
 
