@@ -55,168 +55,128 @@
     }
     </script>
 
-    <style>
-        /* CSS VARIABLES FOR EASY UPDATING */
-        :root {
-            --bg-color: #ffffff;
-            --text-main: #1a1a1a;
-            --text-muted: #666666;
-            --accent: #000000; /* Strict Black */
-            --grid-gap: 2rem;
-            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
+   <style>
+    /* CSS VARIABLES */
+    :root {
+        --bg-color: #ffffff;
+        --text-main: #1a1a1a;
+        --text-muted: #666666;
+        --accent: #000000;
+        --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
 
-        /* RESET & BASE */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: var(--font-main);
-            line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg-color);
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    /* RESET & BASE */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+        font-family: var(--font-main);
+        line-height: 1.6;
+        color: var(--text-main);
+        background-color: var(--bg-color);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        /* TYPOGRAPHY */
-        h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
-        h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 0.5rem; }
-        h2 { font-size: 1.8rem; border-bottom: 2px solid black; padding-bottom: 10px; margin-top: 3rem; }
-        h3 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; }
-        p { margin-bottom: 1.5rem; font-size: 1.1rem; max-width: 70ch; }
-        
-        a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
-        a:hover { background-color: var(--accent); color: white; text-decoration: none; }
-
-/* HEADER GRID SYSTEM */
-.header-grid {
-    display: grid;
-    /* Two columns: Left takes available space, Right fits to image size */
-    grid-template-columns: 1fr auto; 
-    /* Two rows: Auto height based on content */
-    grid-template-rows: auto auto;   
-    gap: 1rem 3rem;  /* Gap between rows (1rem) and columns (3rem) */
-    align-items: center; /* Vertically centers the Title relative to the Image */
-}
-
-.header-title {
-    /* Places Title in Column 1, Row 1 */
-    grid-column: 1;
-    grid-row: 1;
-    margin: 0; /* Removes default spacing to ensure alignment */
-    line-height: 1.1;
-}
-
-.header-image {
-    /* Places Image in Column 2, Row 1 */
-    grid-column: 2;
-    grid-row: 1;
-    max-width: 250px; /* Adjust this number to change image size */
-    height: auto;
-}
-
-.header-subtitle {
-    /* Places Subtitle in Row 2, spanning ALL columns */
-    grid-column: 1 / span 2; 
-    grid-row: 2;
+    /* TYPOGRAPHY */
+    h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+    h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.8rem; border-bottom: 2px solid black; padding-bottom: 10px; margin-top: 3rem; }
+    h3 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    p { margin-bottom: 1.5rem; font-size: 1.1rem; max-width: 70ch; }
     
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    font-weight: 300;
-    margin-top: 0.5rem;
-}
+    a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    a:hover { background-color: var(--accent); color: white; text-decoration: none; }
 
-/* MOBILE ADJUSTMENT (Stacks everything vertically on phones) */
-@media (max-width: 768px) {
+    /* HEADER GRID SYSTEM (Desktop) */
     .header-grid {
-        grid-template-columns: 1fr; /* Single column */
-        gap: 1.5rem;
-        text-align: left;
+        display: grid;
+        grid-template-columns: 1fr auto; /* Title takes space | Image fits content */
+        grid-template-rows: auto auto;   /* Row 1: Title/Img | Row 2: Subtitle */
+        gap: 1rem 3rem;  
+        align-items: center; 
+        margin-top: 2rem;
     }
-    
-    .header-image {
+
+    .header-title {
         grid-column: 1;
-        grid-row: 2; /* Moves image below title on phone */
-        max-width: 120px;
+        grid-row: 1;
+        margin: 0;
     }
-    
+
+    .header-image {
+        grid-column: 2;
+        grid-row: 1;
+        max-width: 250px; 
+        height: auto;
+    }
+
     .header-subtitle {
-        grid-column: 1;
-        grid-row: 3;
+        grid-column: 1 / span 2; /* Spans full width below */
+        grid-row: 2;
+        font-size: 1.5rem;
+        color: var(--text-muted);
+        font-weight: 300;
+        margin-top: 0.5rem;
     }
-}
-        
-/* MOBILE FIX: Stack them vertically on small screens */
-@media (max-width: 768px) {
-    .header-grid {
-        grid-template-columns: 1fr; /* Single column */
-        grid-template-areas: 
-            "image" 
-            "title"
-            "subtitle";
-        gap: 1.5rem;
+
+    /* FRAMEWORKS & BOOKS */
+    .framework-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin-top: 2rem;
     }
+
+    .framework-card {
+        border: 1px solid #e0e0e0;
+        padding: 2rem;
+        transition: transform 0.2s ease;
+    }
+    .framework-card:hover { transform: translateY(-5px); border-color: black; }
     
-    .header-image-area {
-        justify-self: start; /* Aligns image to left on mobile */
+    /* Placeholder styling if you use div instead of img initially */
+    .framework-card div { margin-bottom: 1.5rem; border: 1px solid #eee; } 
+
+    .book-list { list-style: none; }
+    .book-entry { 
+        display: grid; 
+        grid-template-columns: 120px 1fr; 
+        gap: 2rem; 
+        margin-bottom: 3rem; 
+        border-bottom: 1px solid #eee;
+        padding-bottom: 2rem;
     }
+    .year { font-weight: 700; font-size: 3rem; color: #ddd; line-height: 1; }
     
-    .header-image-area img {
-        max-width: 120px;    /* Smaller image on mobile */
-    }
-}
+    footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #eee; color: var(--text-muted); font-size: 0.9rem; }
 
-/* RESPONSIVE: Stack them on mobile */
-@media (max-width: 768px) {
-    .header-title-row {
-        flex-direction: column-reverse; /* Puts image ABOVE title on mobile? Or use 'column' for below */
-        align-items: flex-start;
-    }
-    .header-image {
-        max-width: 100px;      /* Smaller icon on phones */
-        margin-bottom: 1rem;
-        margin-top: 0;
-    }
-}
-
-        /* GRID LAYOUTS */
-        .framework-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 2rem;
-        }
-
-        .framework-card {
-            border: 1px solid #e0e0e0;
-            padding: 2rem;
-            transition: transform 0.2s ease;
-        }
-        .framework-card:hover { transform: translateY(-5px); border-color: black; }
-        .framework-card svg { width: 100%; height: auto; margin-bottom: 1.5rem; border: 1px solid #eee; } /* Placeholder for diagrams */
-
-        /* BOOK LIST (DATA DENSE) */
-        .book-list { list-style: none; }
-        .book-entry { 
-            display: grid; 
-            grid-template-columns: 120px 1fr; 
-            gap: 2rem; 
-            margin-bottom: 3rem; 
-            border-bottom: 1px solid #eee;
-            padding-bottom: 2rem;
-        }
-        .year { font-weight: 700; font-size: 3rem; color: #ddd; line-height: 1; }
+    /* UNIFIED MOBILE STYLES */
+    @media (max-width: 768px) {
+        h1 { font-size: 2.5rem; }
         
-        /* FOOTER */
-        footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #eee; color: var(--text-muted); font-size: 0.9rem; }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .book-entry { grid-template-columns: 1fr; gap: 0.5rem; }
-            .year { font-size: 1.5rem; color: var(--accent); }
+        /* Stack the header grid */
+        .header-grid {
+            grid-template-columns: 1fr; 
+            gap: 1.5rem;
         }
-    </style>
+        
+        /* Move image below title on phone */
+        .header-image {
+            grid-column: 1;
+            grid-row: 2; 
+            max-width: 120px;
+        }
+        
+        .header-subtitle {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        /* Stack the book list */
+        .book-entry { grid-template-columns: 1fr; gap: 0.5rem; }
+        .year { font-size: 1.5rem; color: var(--accent); }
+    }
+</style>
 </head>
 <body>
 
@@ -359,6 +319,7 @@
 
 </body>
 </html>
+
 
 
 
