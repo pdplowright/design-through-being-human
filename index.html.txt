@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Through Being Human | Architectural Methodology & Cognition</title>
+    <meta name="description" content="The cognitive frameworks and design methodologies of Philip D. Plowright. An open-access resource for Domain Syntax, Embodied Cognition, and Algorithmic Agency in architecture.">
+    <meta name="author" content="Philip D. Plowright">
+    <meta name="keywords" content="Architectural Theory, Design Methodology, Embodied Cognition, Urban Design, Domain Syntax, Philip Plowright">
+    
+    <meta property="og:title" content="Design Through Being Human">
+    <meta property="og:description" content="Moving design from intuitive guessing to rigorous, human-centered reasoning.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://designthroughbeinghuman.com">
+    <meta property="og:image" content="assets/concept-map-hero.jpg"> <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "name": "Philip D. Plowright",
+          "jobTitle": "Professor of Architecture",
+          "affiliation": "Lawrence Technological University",
+          "sameAs": [
+            "https://www.linkedin.com/in/plowright/",
+            "https://ltu.academia.edu/PhilipPlowright",
+            "https://www.researchgate.net/profile/Philip-Plowright"
+          ]
+        },
+        {
+          "@type": "Book",
+          "name": "The Hidden Lives of Algorithms",
+          "datePublished": "2026",
+          "author": {"@type": "Person", "name": "Philip D. Plowright"}
+        },
+        {
+          "@type": "Book",
+          "name": "Urban Design Made by Humans",
+          "datePublished": "2023",
+          "author": {"@type": "Person", "name": "Philip D. Plowright"}
+        },
+        {
+          "@type": "Book",
+          "name": "Making Architecture Through Being Human",
+          "datePublished": "2020",
+          "author": {"@type": "Person", "name": "Philip D. Plowright"}
+        },
+        {
+          "@type": "Book",
+          "name": "Revealing Architectural Design",
+          "datePublished": "2014",
+          "author": {"@type": "Person", "name": "Philip D. Plowright"}
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* CSS VARIABLES FOR EASY UPDATING */
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #000000; /* Strict Black */
+            --grid-gap: 2rem;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        /* RESET & BASE */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+        h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 0.5rem; }
+        h2 { font-size: 1.8rem; border-bottom: 2px solid black; padding-bottom: 10px; margin-top: 3rem; }
+        h3 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        p { margin-bottom: 1.5rem; font-size: 1.1rem; max-width: 70ch; }
+        
+        a { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+        a:hover { background-color: var(--accent); color: white; text-decoration: none; }
+
+        /* HEADER */
+        header { padding: 4rem 0; border-bottom: 4px solid var(--accent); }
+        .subtitle { font-size: 1.5rem; color: var(--text-muted); font-weight: 300; display: block; margin-top: 1rem; }
+
+        /* GRID LAYOUTS */
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .framework-card {
+            border: 1px solid #e0e0e0;
+            padding: 2rem;
+            transition: transform 0.2s ease;
+        }
+        .framework-card:hover { transform: translateY(-5px); border-color: black; }
+        .framework-card svg { width: 100%; height: auto; margin-bottom: 1.5rem; border: 1px solid #eee; } /* Placeholder for diagrams */
+
+        /* BOOK LIST (DATA DENSE) */
+        .book-list { list-style: none; }
+        .book-entry { 
+            display: grid; 
+            grid-template-columns: 120px 1fr; 
+            gap: 2rem; 
+            margin-bottom: 3rem; 
+            border-bottom: 1px solid #eee;
+            padding-bottom: 2rem;
+        }
+        .year { font-weight: 700; font-size: 3rem; color: #ddd; line-height: 1; }
+        
+        /* FOOTER */
+        footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #eee; color: var(--text-muted); font-size: 0.9rem; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .book-entry { grid-template-columns: 1fr; gap: 0.5rem; }
+            .year { font-size: 1.5rem; color: var(--accent); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav style="margin-bottom: 2rem; font-size: 0.9rem; text-transform: uppercase; font-weight: 700;">
+            <a href="#frameworks" style="margin-right: 20px;">The Frameworks</a>
+            <a href="#publications" style="margin-right: 20px;">Publications</a>
+            <a href="#about">About</a>
+        </nav>
+        <h1>Design Through<br>Being Human.</h1>
+        <span class="subtitle">A cognitive framework for architecture, urbanism, and the algorithmic environment.</span>
+    </header>
+
+    <main>
+        <section style="margin-top: 4rem;">
+            <p><strong>Architecture and urban environments are not merely physical objects; they are cognitive and social agreements.</strong></p>
+            <p>This site documents the methodological work of Philip D. Plowright. It provides an open-access overview of the syntax, frameworks, and cognitive tools necessary to move design from intuitive guessing to rigorous, human-centered reasoning.</p>
+        </section>
+
+        <section id="frameworks">
+            <h2>The Frameworks</h2>
+            <div class="framework-grid">
+                
+                <article class="framework-card">
+                    <div style="aspect-ratio: 4/3; background: #f4f4f4; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.8rem;">[Diagram: Image Schemas]</div>
+                    <h3>Embodiment & Metaphor</h3>
+                    <p>We understand space because we have bodies. This framework rejects the Cartesian split, arguing that architectural meaning is pre-conceptual, derived from "image schemas" and processed through metaphor.</p>
+                    <a href="embodiment.html">Explore the Method &rarr;</a>
+                </article>
+
+                <article class="framework-card">
+                     <div style="aspect-ratio: 4/3; background: #f4f4f4; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.8rem;">[Diagram: Domain Transfer]</div>
+                    <h3>Domain Syntax</h3>
+                    <p>Design innovation occurs through the successful transfer of syntax between domains. This section outlines how to structure a "concept" as a rigorous mapping of relationships.</p>
+                    <a href="syntax.html">Explore the Method &rarr;</a>
+                </article>
+
+                <article class="framework-card">
+                     <div style="aspect-ratio: 4/3; background: #f4f4f4; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.8rem;">[Diagram: Social Boundaries]</div>
+                    <h3>Social Agreements</h3>
+                    <p>The city is not a collection of buildings; it is a negotiation of boundaries. Shifting analysis from "morphology" (shapes) to "social agreement" (behaviors).</p>
+                    <a href="urban.html">Explore the Method &rarr;</a>
+                </article>
+
+                <article class="framework-card">
+                     <div style="aspect-ratio: 4/3; background: #f4f4f4; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.8rem;">[Diagram: Algorithmic Logic]</div>
+                    <h3>Algorithmic Agency</h3>
+                    <p>As design tools become active participants, we must audit their agency. Examining the "hidden lives" of algorithms and how data structures invisibly shape outcomes.</p>
+                    <a href="algorithms.html">Explore the Method &rarr;</a>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>The Reference Library</h2>
+            <ul class="book-list">
+                
+                <li class="book-entry">
+                    <div class="year">2026</div>
+                    <div>
+                        <h3>The Hidden Lives of Algorithms</h3>
+                        <p><em>Routledge. Co-authored with Silvio Carta.</em><br>
+                        Investigates the intersection of geometry, computation, and social meaning, challenging designers to look beyond technical implementation.</p>
+                        <a href="https://www.routledge.com" target="_blank">Publisher Link</a>
+                    </div>
+                </li>
+
+                <li class="book-entry">
+                    <div class="year">2023</div>
+                    <div>
+                        <h3>Urban Design Made by Humans</h3>
+                        <p><em>Routledge. Co-authored with Anirban Adhya.</em><br>
+                        A handbook of 56 concepts defining the city not as hardware, but as a system of social agreements and proxemic negotiations.</p>
+                        <a href="https://www.routledge.com" target="_blank">Publisher Link</a>
+                    </div>
+                </li>
+
+                <li class="book-entry">
+                    <div class="year">2020</div>
+                    <div>
+                        <h3>Making Architecture Through Being Human</h3>
+                        <p><em>Routledge.</em><br>
+                        A reference book presenting 51 concepts fundamental to human thinking and how we interpret the environment around us.</p>
+                        <a href="https://www.routledge.com" target="_blank">Publisher Link</a>
+                    </div>
+                </li>
+
+                <li class="book-entry">
+                    <div class="year">2014</div>
+                    <div>
+                        <h3>Revealing Architectural Design</h3>
+                        <p><em>Routledge.</em><br>
+                        An advanced primer on methods, frameworks, and tools. Connects general design thinking to the underlying cognitive frameworks of the discipline.</p>
+                        <a href="https://www.routledge.com" target="_blank">Publisher Link</a>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+
+        <section id="about" style="background: #f9f9f9; padding: 2rem; margin-top: 4rem;">
+            <h3>About Philip D. Plowright</h3>
+            <p style="margin-top: 1rem; font-size: 0.95rem;">
+                Philip D. Plowright is Professor of Architecture and Chair of Design at Lawrence Technological University. His work focuses on the intersection of cognitive semantics and design methodology. He is a registered architect (NCARB) and the author of four books on architectural theory and practice.
+            </p>
+            <p>
+                <a href="assets/CV_plowright-current.pdf" download>Download Full CV (PDF)</a> | 
+                <a href="mailto:pplowrigh@ltu.edu">Contact</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        &copy; 2025 Philip D. Plowright. All content is open for educational use with citation.<br>
+        <span style="font-size: 0.8em; color: #999;">Site structure based on the "Open Methodology" framework.</span>
+    </footer>
+
+</body>
+</html>
