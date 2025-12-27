@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Hierarchy | Design Through Being Human</title>
+    <meta name="description" content="A unified theory of architectural information. Integrating the body, urban friction, algorithmic rules, and cultural meaning into a single defensible stack.">
+    
+    <style>
+        /* CSS VARIABLES */
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #000000;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        /* RESET & BASE */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            max-width: 900px; 
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; margin-bottom: 1rem; }
+        h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 0.5rem; margin-top: 4rem; }
+        h2 { font-size: 1.8rem; border-bottom: 2px solid black; padding-bottom: 10px; margin-top: 4rem; }
+        h3 { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 2rem;}
+        
+        p { margin-bottom: 1.5rem; font-size: 1.15rem; }
+        ul { margin-bottom: 2rem; padding-left: 20px; font-size: 1.15rem; }
+        li { margin-bottom: 1rem; }
+
+        /* HIERARCHY STACK VISUALIZATION */
+        .hierarchy-stack {
+            display: flex;
+            flex-direction: column-reverse; /* Builds from bottom up */
+            gap: 15px;
+            margin: 3rem 0;
+        }
+        .stack-layer {
+            border: 1px solid #1a1a1a;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            background: #fff;
+        }
+        .stack-layer:hover { background: #f9f9f9; transform: translateX(10px); }
+        
+        .layer-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; }
+        .layer-title { font-weight: 700; text-transform: uppercase; font-size: 1rem; }
+        .layer-book { font-style: italic; font-size: 0.9rem; color: #666; text-align: right;}
+
+        .layer-desc { font-size: 1.1rem; color: #333; display: block; margin-top: 0.5rem; }
+        
+        /* Layer Specifics */
+        .layer-1 { border-left: 12px solid #000; } /* Strong Foundation */
+        .layer-2 { border-left: 12px solid #444; }
+        .layer-3 { border-left: 12px solid #888; }
+        .layer-4 { border-left: 12px solid #ccc; border-style: dashed; } /* Weak Top */
+
+        /* NAVIGATION */
+        nav { margin-bottom: 4rem; font-size: 0.9rem; text-transform: uppercase; font-weight: 700; border-bottom: 1px solid #eee; padding-bottom: 1rem; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* CITATION BOX */
+        .citation-box {
+            background: #f4f4f4;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-left: 4px solid #999;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">&larr; Back to Frameworks</a>
+    </nav>
+
+    <header>
+        <h1>The Information Hierarchy</h1>
+        <p class="subtitle" style="font-size: 1.5rem; color: #666; font-weight: 300;">
+            Architecture is not a style; it is a stack. To design defensibly, we must prioritize fundamental human information over cultural constructs.
+        </p>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                The central thesis across all four books is that architectural errors occur when we invert the "Information Hierarchy." When we prioritize the visual style of a building (Layer 4) over the embodied experience of the user (Layer 1), we create environments that are alienating and indefensible.
+            </p>
+            <p>
+                This framework organizes the methodology into a single vertical stack, showing how the different books act as manuals for different layers of reality.
+            </p>
+        </section>
+
+        <section>
+            <h3>1. The Integrated Stack</h3>
+            <p>Design operates on a hierarchy of reality. To create defensible environments, we must distinguish between biological constants and cultural variables. This stack applies equally to a physical building or a digital platform.</p>
+
+            <div class="hierarchy-stack">
+         
+                <div class="stack-layer layer-4">
+                    <div class="layer-header">
+                        <span class="layer-title">Layer 1: The Sensori-Motor Foundation (Existence)</span>
+                       
+                    </div>
+                    <span class="layer-desc"><strong>The Layer of the Body.</strong><br>
+                    This is the non-negotiable baseline of human existence. It consists of the image schemas (UP/DOWN, CENTRE/PERIPHERY, CONTAINER) that structure our comprehension of reality. Whether navigating a cathedral or a dataset, the human mind relies on these pre-conceptual patterns to establish orientation and relationships. If a design fails here, it is unintelligible.</span>
+                </div>
+                
+                <div class="stack-layer layer-3">
+                    <div class="layer-header">
+                        <span class="layer-title">Layer 2: Embodied Social Affordances (Interaction)</span>
+                      
+                    </div>
+                    <span class="layer-desc"><strong>The Layer of Probability.</strong><br>
+                    Here, geometry creates the potential for behavior. We utilize friction and flow to modulate human interaction. In a city, a narrow street forces a pause (interaction); in a building, a corridor without an destination challenges activation of space. We do not design the behavior but we do design the affordance that makes the behavior probable.</span>
+                </div>
+
+                <div class="stack-layer layer-2">
+                    <div class="layer-header">
+                        <span class="layer-title">Layer 3: Constructed Social Syntax (Organization)</span>
+                    
+                    </div>
+                    <span class="layer-desc"><strong>The Layer of Inclusion and Exclusion</strong><br>
+                    This is the layer of the wall as a shared social expression. We organize social relationships by defining physical limits. In the built environment, every line drawn on a plan is a social declaration. The zoning envelope, the property line, and the partition wall function to provide the grammatical structure of the city. These elements define "public" vs. "private" and "ours" vs. "theirs," stabilizing social interaction by clearly delineating territory, for better or worst.</span>
+                </div>
+
+                
+                <div class="stack-layer layer-1">
+                    <div class="layer-header">
+                        <span class="layer-title">Layer 4: Cultural Constructs (Meaning)</span>
+                    
+                    </div>
+                    <span class="layer-desc"><strong>The Layer of Style and Symbolism.</strong><br>
+                    Architecture functions as a communicative act. Through sign systems and shared group expressions, the building becomes a vehicle for cultural transmission. The column, the cornice, or the glass curtain wall operate as signifiers that communicate power, democracy, or efficiency to the viewer. However, this layer is inherently volatile. Because meaning relies on a cultural consensus rather than a embodied meaning, the "language" of the building shifts as society evolves. A design built solely on these semantics is unstable as it relies on the fleeting agreement of the audience.</span>
+                </div>
+
+
+            </div>
+        </section>
+        <section>
+  <h3>2. The Methodological Map</h3>
+  <p>
+    Understanding this stack reveals the specific function of my research and publications. 
+    The books are not separate theories but are distinct manuals for operating at different layers of this hierarchy.
+  </p>
+
+  <ul>
+    <li>
+      <strong>Addressing Layers 1 & 2 (The Constants):</strong> 
+      <em>Making Architecture Through Being Human</em> and <em>Urban Design Made by Humans</em> focus on the base of the stack. 
+      They create a framework for the <strong>sensori-motor</strong> and <strong>embodied social</strong> layers, 
+      identifying the biological constants and image schemas, such as CONTAINMENT, VERTICALITY, 
+      and CENTRE-PERIPHERY, that the human mind uses to comprehend reality before culture even intervenes. 
+      This is the manual for designing what is stable, defensible, and inherently human.
+    </li>
+    <li>
+      <strong>Addressing Layer 3 (The Syntax):</strong> 
+      <em>Revealing Architectural Design</em> operates primarily at the <strong>social constructed</strong> layer. 
+      It provides the "grammar" for organizing these forces into a coherent <strong>social syntax</strong>. 
+      By defining how we use boundaries to create "socially constructed agreements," this work offers the tools 
+      to manipulate the inclusion and exclusion that define our public and private lives.
+    </li>
+    <li>
+      <strong>Addressing Layer 4 (The Risk):</strong> 
+      <em>The Hidden Lives of Algorithms</em> examines the danger of the <strong>Cultural/Symbolic</strong> layer. 
+      It warns against the tendency to mistake the geometric symbol for the embodied reality it represents. 
+      When we confuse the map (the digital representation) with the territory (the embodied potential), 
+      we risk creating environments that are visually seductive but experientially hollow.
+    </li>
+  </ul>
+  <p>
+    To design defensibly, we must understand which layer we are manipulating. You cannot solve a Layer 1 problem 
+    (human orientation) with a Layer 4 solution (style).
+  </p>
+</section>
+
+
+        <section>
+            <h3>3. The Crisis of Inversion</h3>
+            <p>
+                A critical structural failure in contemporary design is the <em>inversion of the stack</em>.
+            </p>
+            <p>
+                We often witness a design culture that prioritizes the cultural semantic (what a building means or looks like) over the ontological (how a building is and performs) or embodied semantic (how we intuitively experience the space). In education and practice, we often reward the provocative image or the complex cultural narrative while ignoring the fundamental human requirement for spatial coherence.
+            </p>
+            <p>In <em>Revealing Architectural Design</em>, the issue is discussed as the confusion between a concept and an idea without a methdological link between the two that transfers valid information. The methodological error occurs when a designer believes the Concept is the design. This results in "thin" architecture—buildings that function as large-scale sculptures or diagrams but fail to provide a coherent embodied experience.</p>
+            <p>In <em>The Hidden Lives of Algorithms</em>, we discuss the danger of the digital as the outcomes are often judged at the cultural level of what it looks like or how it represents. This can easily create environments that look correct as images but fail as embodied human experiences.
+            <p>When we design from the top down—starting with the visual style—we create work that relies entirely on cultural validation. If the fashion shifts or the theory goes out of date, the building loses its value. To design defensibly, we must reverse the stack or work on all four layers simultaneously. Good luck.</p>
+        </section>
+
+
+        <div class="citation-box">
+            <strong>Key References</strong><br><br>
+            Plowright, P. D., & Carta, S. (2026). <em>The Hidden Lives of Algorithms</em>. Routledge.<br>
+            Plowright, P. D., & Adhya, A. (2023). <em>Urban Design Made by Humans: A Handbook of Design Ideas</em>. Routledge.<br>
+            Plowright, P. D. (2020). <em>Making Architecture Through Being Human: A Handbook of Design Ideas</em>. Routledge.<br>
+            Plowright, P. D. (2014). <em>Revealing Architectural Design: Methods, Frameworks and Tools</em>. Routledge.<br><br>
+            <strong>Supplementary Reading</strong><br>
+            Plowright, P. D. (2020). <a href="https://en.c3zine.com/shop_view/20" target="_blank" style="color:#666; text-decoration: underline;">Information, people and changing a few priorities</a>. C3 Magazine #405.
+        </div>
+
+    </main>
+
+    <footer>
+        <p style="font-size: 0.8rem; text-align: left; color: #999; margin-top: 4rem;">
+            &copy; 2025 Philip D. Plowright. Open Methodology.
+        <br><a href="index.html">Return to Index</a></p>
+    </footer>
+
+
+</body>
+</html>

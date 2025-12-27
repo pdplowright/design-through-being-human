@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing for Specificity | Philip D. Plowright</title>
+    <meta name="description" content="Moving beyond the 'Average Human' to a balance of sensorimotor universals and socio-cultural specificity in architectural design.">
+    
+    <style>
+        /* CSS VARIABLES & RESET */
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #000000;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            max-width: 900px; 
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* TYPOGRAPHY */
+        h1 { font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.02em; line-height: 1.1; }
+        h2 { font-size: 1.8rem; margin-top: 3rem; margin-bottom: 1rem; border-bottom: 2px solid black; padding-bottom: 10px; }
+        h3 { font-size: 1.3rem; margin-top: 2rem; margin-bottom: 0.5rem; font-weight: 600; }
+        p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+        
+        /* QUOTE BLOCK STYLING */
+        blockquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 20px;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #444;
+            background: #f9f9f9;
+            padding: 2rem;
+        }
+        blockquote footer {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            font-style: normal;
+            color: #000;
+        }
+
+         /* DIAGRAM STYLING */
+        .diagram-container {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .diagram-container img { max-width: 100%; height: auto; border: 1px solid #ddd; }
+        .caption { font-size: 0.9rem; color: #666; margin-top: 1rem; display: block; }
+        
+        /* NAV */
+        nav { margin-bottom: 4rem; padding-top: 2rem; font-size: 0.9rem; text-transform: uppercase; font-weight: 700; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* IMAGES */
+        .content-img {
+            width: 100%;
+            height: auto;
+            margin: 2rem 0;
+            border: 1px solid #eee;
+        }
+
+        /* FOOTER */
+        footer { margin-top: 5rem; padding-top: 2rem; border-top: 1px solid #eee; color: var(--text-muted); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">&larr; Back to Frameworks</a>
+    </nav>
+
+    <header>
+        <h1>Designing for Specificity</h1>
+        <p style="font-size: 1.4rem; color: #666; font-weight: 300; max-width: 65ch;">
+            We share universal biological equipment, but we live distinct cultural lives. Design fails when it confuses the two.
+        </p>
+    </header>
+
+    <main>
+        
+        <section>
+            <p>
+                In the attempt to be "universal," Modernism often collapsed the human subject into a generic standard—from Le Corbusier's Modulor to the standardized data sets of Neufert. This approach assumes that if we design for the average, we design for everyone.
+            </p>
+            <p>
+                A rigorous cognitive approach to architecture requires us to distinguish between several distinct layers of human existence: the sensori-motor universals with biological mechanics of motion and accessibility and the socio-cultural specifics.
+            </p>
+        </section>
+
+        <section>
+            <h3>1. The Sensorimotor Universal</h3>
+            <p>
+                There are aspects of architecture that are indeed universal. Because we all possess human bodies subject to gravity, we share image schemas which are highly abstract, pre-conceptual structures of understanding. Regardless of cultural origin, every human understands UP/DOWN (gravity), CONTAINER/CONTAINED (shelter), and SOURCE-PATH-GOAL (movement).
+            </p>
+            <blockquote>
+                The body is the first foundation of architectural meaning. Before we have 'style' or 'culture', we have gravity, tension, and the capacity for movement. These sensorimotor baselines provide the shared grammar upon which all specific meanings are built. <span style="font-size: 0.8em; font-style: normal;">— Adapted from <em>Making Architecture Through Being Human</em> (2020)</span>
+            </blockquote>
+            
+                <div class="diagram-container">
+        <img src="assets/basic%20schemas.jpg" alt="Foundational image schemas">
+        <span class="caption">Figure 1: Basic schemas at the basis of human experience (from <em>The Hidden Lives of Algorithms</em>) 2026.</span>
+    </div>
+            
+        </section>
+
+        <section>
+            <h3>2. The Reduction of the Algorithm</h3>
+            <p>
+               The danger of current computational design is that it amplifies the generic. Algorithms rely on formal languages that must strip away context to function efficiently. They treat the user as a data point rather than a phenomenological entity.
+            </p>
+            <blockquote>
+                "Formal languages are designed to reduce complexity for the prioritisation of efficiency. What results is a simplified version of reality... The algorithmic process is highly reduced and simplified compared to natural spatial decision-making."<span style="font-size: 0.8em; font-style: normal;">— The Hidden Lives of Algorithms (2026)</span>
+            </blockquote>
+            <p>
+                When we design using only these reduced datasets, we do not design for a human but for a statistical average that does not exist.
+            </p>
+        </section>
+
+        <section>
+            <h3>3. Radical Specificity</h3>
+            <p>
+                To design effectively, we must move toward specificity. Meaning is not inherent in the geometry; it is constructed through the interaction of a specific body in a specific context. A doorway is not just an opening (Universal); it is a threshold of privacy, a security boundary, or a ritual passage depending on the cultural specificity of the user.
+            </p>
+   <p>The principle to consider is social potential versus social determination. This means distinguishing between what we can control (geometry and spatial composition) and what we cannot (culture). We can design the affordances which are physical features (steps, walls, changes in texture) that make a behavior possible. We need to align this with cultural expectationis (which might not be ours) through social agreements that make that behavior appropriate.
+<p>When we confuse these two, we fall into architectural determinism or the false belief that a specific shape will automatically force a specific social result. Design provides the stage; specific cultures write the script.</p>
+            <h4>When designing for groups of people, ask these questions:</h4>
+            <ul style="margin-left: 20px; margin-top: 1rem;">
+                <li style="margin-bottom: 10px;">Identify the universal: What are the non-negotiable needs of the human body (light, air, gravity, orientation)?</li>
+                <li style="margin-bottom: 10px;">Identify the specific: What are the socio-cultural rituals, memories, and phenomenological needs of this specific user group?</li>
+                <li style="margin-bottom: 10px;">Reject the generic: Is this a standard solutions that does not fit either the universal or the specific?</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p style="font-size: 0.8rem; text-align: left; color: #999; margin-top: 4rem;">
+            &copy; 2025 Philip D. Plowright. Open Methodology.
+        <br><a href="index.html">Return to Index</a></p>
+    </footer>
+
+
+</body>
+</html>

@@ -6,7 +6,7 @@
     <title>Design Through Being Human | Architectural Methodology & Cognition</title>
     <meta name="description" content="The cognitive frameworks and design methodologies of Philip D. Plowright. An open-access resource for Domain Syntax, Embodied Cognition, and Algorithmic Agency in architecture.">
     <meta name="author" content="Philip D. Plowright">
-    <meta name="keywords" content="Architectural Theory, Design Methodology, Embodied Cognition, Urban Design, Domain Syntax, Philip Plowright">
+    <meta name="keywords" content="Architectural Theory, Design Methodology, Architecture, Embodied Cognition, Urban Design, Domain Syntax, Philip Plowright">
     
     <meta property="og:title" content="Design Through Being Human">
     <meta property="og:description" content="Moving design from intuitive guessing to rigorous, human-centered reasoning.">
@@ -25,6 +25,7 @@
             "https://www.linkedin.com/in/plowright/",
             "https://ltu.academia.edu/PhilipPlowright",
             "https://www.researchgate.net/profile/Philip-Plowright"
+            "https://www.amazon.com/stores/Philip-D.-Plowright/author/B00EAA0KBU"
           ]
         },
         {
@@ -32,26 +33,26 @@
           "name": "The Hidden Lives of Algorithms",
           "datePublished": "2026",
           "author": {"@type": "Person", "name": "Philip D. Plowright"}
-        },
+          },
         {
           "@type": "Book",
           "name": "Urban Design Made by Humans",
           "datePublished": "2023",
           "author": {"@type": "Person", "name": "Philip D. Plowright"}
-        },
+          },
         {
           "@type": "Book",
           "name": "Making Architecture Through Being Human",
           "datePublished": "2020",
           "author": {"@type": "Person", "name": "Philip D. Plowright"}
-        },
-    {
-  "@type": "Thesis",
-  "name": "Qualitative Embodiment in English Architectural Discourse",
-  "datePublished": "2018",
-  "inSupportOf": "Ph.D. in Humanities",
-  "author": {"@type": "Person", "name": "Philip D. Plowright"}
-}
+          },
+        {
+            "@type": "Dissertation",
+            "name": "Qualitative Embodiment in English Architectural Discourse",
+            "datePublished": "2018",
+            "inSupportOf": "Ph.D. in Humanities",
+            "author": {"@type": "Person", "name": "Philip D. Plowright"}
+            }
         {
           "@type": "Book",
           "name": "Revealing Architectural Design",
@@ -121,7 +122,41 @@
         transition: transform 0.2s ease;
     }
     .framework-card:hover { transform: translateY(-5px); border-color: black; }
+       
+       /* CARD HOVER EFFECT */
+.framework-card > a {
+    display: block;        /* Makes the link fill the space */
+    border-radius: 4px;    /* Optional: Slight curve to the black box */
+    padding: 10px;         /* Adds a little breathing room for the black background */
+    margin: -10px;         /* Pulls the box out so it doesn't mess up layout */
+    transition: all 0.2s ease;
+}
+
+.framework-card > a:hover {
+    background-color: #000;   /* Ensures the background is black */
+    color: #fff !important;   /* !important forces text to turn white */
+}
+
+/* Ensure the sub-elements also turn white */
+.framework-card > a:hover h3,
+.framework-card > a:hover p,
+.framework-card > a:hover span {
+    color: #fff !important;
+}
+       
+
     
+    /* Add for card images */
+    .card-img {
+        width: 100%;
+        height: 225px;           /* Fixed height for perfect alignment */
+        object-fit: cover;       /* Ensures the image fills the area */
+        object-position: center; 
+        border-bottom: 1px solid #eee;
+        margin-bottom: 1rem;
+        display: block;
+       }
+       
     /* Placeholder styling if you use div instead of img initially */
     .framework-card div { margin-bottom: 1.5rem; border: 1px solid #eee; } 
 
@@ -166,8 +201,8 @@
     }
 </style>
 </head>
+    
 <body>
-
 <header>
         <nav style="margin-bottom: 2rem; font-size: 0.9rem; text-transform: uppercase; font-weight: 700;">
             <a href="#frameworks" style="margin-right: 20px;">The Frameworks</a>
@@ -175,49 +210,108 @@
             <a href="#about">About</a>
         </nav>
         <h1>Design Through<br>Being Human.</h1>
-        <span class="subtitle">A cognitive framework for architecture, urbanism, and the algorithmic environment.</span>
+        <span class="subtitle">Embodied cognitive frameworks for architectural, urban, and the algorithmic environments.</span>
     </header>
 
     <main>
         <section style="margin-top: 4rem;">
-            <p><strong>Architecture and urban environments are not merely physical objects; they are cognitive and social agreements.</strong></p>
-            <p>Here we document the methodological and spatial semantic work of Philip D. Plowright, addressing architectural spatial theory. It provides an open-access overview of the syntax, frameworks, and cognitive tools necessary to move design from intuitive guessing to rigorous, human-centered reasoning.</p>
+            <p><strong>Architecture and urban environments are cognitive and social agreements made visible. They are the physical evidence of how we value and understand our existence.</strong></p>
+            <p>This site documents the methodological frameworks and spatial semantics that drive my work in architectural theory. It provides an open-access overview of the syntax, frameworks, and cognitive tools necessary to transform design from intuitive guessing into rigorous, human-centered reasoning. These summaries serve as accessible entry points to the deeper concepts explored in my books. They distill denser theoretical structures into direct language to foster a transparent conversation about the ideas that fundamentally shape our built environment.</p>
+        </section>
+        <section style="background: #f9f9f9; padding: 2rem; max-width: 78ch;">
+             <blockquote>
+                "Bringing awareness to an implicit practice is a way to reflect, adapt, and improve that practice... To become a better architectural designer, deep knowledge and clear visibility of the process of design are required."
+                <br><span style="font-size: 0.8em; font-style: normal;">— Revealing Architectural Design (2014)</span>
+            </blockquote>
         </section>
 
         <section id="frameworks">
-            <h2>The Frameworks</h2>
-            <div class="framework-grid">
-                
-                <article class="framework-card">
-                    <div style="aspect-ratio: 4/3; background: #f4f4f4; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.8rem;">[Diagram: Image Schemas]</div>
-                    <h3>Embodiment & Metaphor</h3>
-                    <p>We understand space because we have bodies. This framework rejects the Cartesian split, arguing that architectural meaning is pre-conceptual, derived from "image schemas" and processed through metaphor.</p>
-                    <a href="embodiment.html">Explore the Method &rarr;</a>
-                </article>
+    <h2>Frameworks</h2>
+    <div class="framework-grid">
+        
+        <article class="framework-card">
+            <a href="embodiment.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/framework_01.jpg" alt="Diagram: Embodiment and Metaphor" class="card-img">
+                <h3>Embodiment & Metaphor</h3>
+                <p>We understand space because we have bodies. This framework rejects the Cartesian split, arguing that architectural meaning is pre-conceptual, derived from "image schemas" and processed through correlational metaphor.</p>
+                <span style="font-size: 0.9rem; font-weight: 700; text-decoration: underline;">Explore &rarr;</span>
+            </a>
+        </article>
 
-                <article class="framework-card">
-                     <div style="aspect-ratio: 4/3; background: #f4f4f4; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.8rem;">[Diagram: Domain Transfer]</div>
-                    <h3>Domain Syntax</h3>
-                    <p>Design innovation occurs through the successful transfer of syntax between domains. This section outlines how to structure a "concept" as a rigorous mapping of relationships.</p>
-                    <a href="syntax.html">Explore the Method &rarr;</a>
-                </article>
+        <article class="framework-card">
+            <a href="syntax.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/framework_02.jpg" alt="Diagram: Domain Syntax" class="card-img">
+                <h3>Domain Syntax</h3>
+                <p>Design innovation often occurs through the successful transfer of syntax between domains. This section outlines how to structure a "concept" as a rigorous mapping of relationships.</p>
+                <span style="font-size: 0.9rem; font-weight: 700; text-decoration: underline;">Explore &rarr;</span>
+            </a>
+        </article>
 
-                <article class="framework-card">
-                     <div style="aspect-ratio: 4/3; background: #f4f4f4; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.8rem;">[Diagram: Social Boundaries]</div>
-                    <h3>Social Agreements</h3>
-                    <p>The city is not a collection of buildings; it is a negotiation of boundaries. Shifting analysis from "morphology" (shapes) to "social agreement" (behaviors).</p>
-                    <a href="urban.html">Explore the Method &rarr;</a>
-                </article>
+        <article class="framework-card">
+            <a href="social-potential.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/framework_03.jpg" alt="Diagram: Social Potentials" class="card-img">
+                <h3>Social Potentials</h3>
+                <p>Architecture cannot force people to interact, but it creates the probability of encounter. How sociopetal geometry and algorithmic clustering engineer the capacity for community.</p>
+                <span style="font-size: 0.9rem; font-weight: 700; text-decoration: underline;">Explore &rarr;</span>
+            </a>
+        </article>
 
-                <article class="framework-card">
-                     <div style="aspect-ratio: 4/3; background: #f4f4f4; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.8rem;">[Diagram: Algorithmic Logic]</div>
-                    <h3>Algorithmic Agency</h3>
-                    <p>As design tools become active participants, we must audit their agency. Examining the "hidden lives" of algorithms and how data structures invisibly shape outcomes.</p>
-                    <a href="algorithms.html">Explore the Method &rarr;</a>
-                </article>
+        <article class="framework-card">
+            <a href="algorithmic-agency.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/framework_04.jpg" alt="Diagram: Algorithmic Agency" class="card-img">
+                <h3>Algorithmic Agency</h3>
+                <p>As design tools become active participants, we must audit their agency. Examining the "hidden lives" of algorithms and how data structures invisibly shape outcomes.</p>
+                <span style="font-size: 0.9rem; font-weight: 700; text-decoration: underline;">Explore &rarr;</span>
+            </a>
+        </article>
+        
+        <article class="framework-card">
+            <a href="information-hierarchy.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/framework_05.jpg" alt="Diagram: Information Hierarchy" class="card-img">
+                <h3>Information Hierarchy</h3>
+                <p>Architecture often mistakes the outcome for the purpose. This framework prioritizes a balanced approach moving from basic human information (sensori-motor) to cultural expressions.</p>
+                <span style="font-size: 0.9rem; font-weight: 700; text-decoration: underline;">Explore &rarr;</span>
+            </a>
+        </article>
 
-            </div>
-        </section>
+        <article class="framework-card">
+            <a href="good-friction.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/framework_06.jpg" alt="Diagram: Good Friction" class="card-img">
+                <h3>Good Friction</h3>
+                <p>Efficiency is the enemy of community. Why we need texture, slowness, gaps, and pauses in our buildings and cities to encourage meaningful connection.</p>
+                <span style="font-size: 0.9rem; font-weight: 700; text-decoration: underline;">Explore &rarr;</span>
+            </a>
+        </article>
+        
+        <article class="framework-card">
+            <a href="grey-box.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/framework_07.jpg" alt="Diagram: The Grey Box" class="card-img">
+                <h3>The Grey Box</h3>
+                <p>Creativity is not magic; it is a method. Moving from the mysterious "Black Box" of genius to a transparent, defensible design process.</p>
+                <span style="font-size: 0.9rem; font-weight: 700; text-decoration: underline;">Explore &rarr;</span>
+            </a>
+        </article>
+        
+        <article class="framework-card">
+            <a href="radical-personification.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/framework_08.jpg" alt="Diagram: Radical Personification" class="card-img">
+                <h3>Radical Personification</h3>
+                <p>When we think we are empathising, we are actually simulating empathy. This is because the only way we know anything is through projecting our own muscles onto the buildings we inhabit.</p>
+                <span style="font-size: 0.9rem; font-weight: 700; text-decoration: underline;">Explore &rarr;</span>
+            </a>
+        </article>
+
+        <article class="framework-card">
+            <a href="specificity.html" style="text-decoration: none; color: inherit;">
+                <img src="assets/framework_09.jpg" alt="Diagram: Myth of the Universal" class="card-img">
+                <h3>Specificity/Universal</h3>
+                <p>We share universal biological equipment, but we live distinct cultural lives. Why design must balance the shared "sensorimotor" substrate with the radical specificity of socio-cultural experience.</p>
+                <span style="font-size: 0.9rem; font-weight: 700; text-decoration: underline;">Explore &rarr;</span>
+            </a>
+        </article>                  
+        
+    </div>
+</section>
 
         <section id="publications">
             <h2>The Reference Library</h2>
@@ -248,7 +342,7 @@
                     <div>
                         <h3>Making Architecture Through Being Human</h3>
                         <p><em>Routledge.</em><br>
-                        A reference book presenting 51 concepts fundamental to human thinking and how we interpret the environment around us.</p>
+                        A reference book presenting 51 concepts fundamental to architecture derived from embodied thinking and how we interpret the environment around us.</p>
                         <a href="https://www.routledge.com/Making-Architecture-Through-Being-Human-A-Handbook-of-Design-Ideas/Plowright/p/book/9780367204778" target="_blank">Publisher Link</a>
                     </div>
                 </li>
@@ -268,7 +362,7 @@
                     <div>
                         <h3>Revealing Architectural Design</h3>
                         <p><em>Routledge.</em><br>
-                        An advanced primer on methods, frameworks, and tools. Connects general design thinking to the underlying cognitive frameworks of the discipline.</p>
+                        An advanced primer on architectural design methods, frameworks, and tools. Connects general design thinking to the underlying cognitive frameworks of the discipline.</p>
                         <a href="https://www.routledge.com/Revealing-Architectural-Design-Methods-Frameworks-and-Tools/Plowright/p/book/9780415639026" target="_blank">Publisher Link</a>
                     </div>
                 </li>
@@ -282,7 +376,7 @@
         Philip D. Plowright is Professor of Architecture and Chair of Design at Lawrence Technological University. He is a registered architect (NCARB) and a design theorist working at the intersection of embodiment, through the cognitive linguistic tradition, and architectural methodology.
     </p>
     <p style="font-size: 0.95rem;">
-        His work bridges the gap between how we think and what we build. Grounded in his exploration of cognitive processes as underlying structures in design decisions, his frameworks apply cognitive science to design practice—moving architecture from intuitive guessing to rigorous, human-centered reasoning. Which still allows for quite a bit of space for creativity, personalisation, and moments of wonder.
+        His work bridges the gap between how we think and what we build. Grounded in THE exploration of cognitive processes as underlying structures in design decisions, his frameworks apply cognitive science to design practice—moving architecture from intuitive guessing to rigorous, human-centered reasoning. Which still allows for quite a bit of space for creativity, personalisation, and moments of wonder.
     </p>
     <p>
         <a href="assets/CV_plowright-current.pdf" download>Download Full CV (PDF)</a> | 
