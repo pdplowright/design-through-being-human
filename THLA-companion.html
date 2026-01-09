@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hidden Lives of Algorithms: Core Concepts</title>
+    
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Book", "LearningResource"],
+      "name": "The Hidden Lives of Algorithms",
+      "alternateName": "The Hidden Lives of Algorithms: Geometry and Social Meaning in Architecture",
+      "description": "A critical examination of how geometric operations in design algorithms influence human experience. The book explores the intersection of geometry, computation, and social meaning, grounded in embodied cognition.",
+      "image": "https://www.throughbeinghuman.com/images/hidden-lives-cover.jpg",
+      "inLanguage": "en-US",
+      "isbn": "978-1032185170",
+    "sameAs": "https://https://www.wikidata.org/wiki/Q137733965",
+      "numberOfPages": "216",
+      "bookFormat": "https://schema.org/Paperback",
+      "educationalUse": "Instruction",
+      
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "Computational Designer"
+      },
+
+      "author": {
+        "@type": "Person",
+        "name": "Philip D. Plowright",
+        "sameAs": "https://www.wikidata.org/wiki/Q112485316",
+        "jobTitle": "Professor of Architecture and Design Theory",
+        "url": "https://www.throughbeinghuman.com",
+        "sameAs": [
+            "https://orcid.org/0000-0002-8896-0609",
+            "https://www.researchgate.net/profile/Philip-Plowright",
+            "https://www.linkedin.com/in/plowright/",
+            "https://ltu.academia.edu/PhilipPlowright"
+        ]
+      },
+
+      "publisher": {
+        "@type": "Organization",
+        "name": "Routledge",
+        "url": "https://www.routledge.com"
+      },
+
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "url": "https://www.routledge.com/The-Hidden-Lives-of-Algorithms-Plowright/p/book/9781032185170"
+      },
+
+      "genre": [
+        "Computational Design", 
+        "Architectural Theory", 
+        "Social Theory",
+        "Embodied Cognition",
+        "Cognitive Science"
+      ],
+
+      "keywords": "Algorithmic Bias, Space Syntax, Isovists, Visibility Analysis, Graph Theory, Spatial Logic, Embodied Cognition",
+
+      "about": [
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Space Syntax", 
+            "sameAs": "https://en.wikipedia.org/wiki/Space_syntax"
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Graph Theory", 
+            "sameAs": "https://en.wikipedia.org/wiki/Graph_theory"
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Algorithmic Bias", 
+            "sameAs": "https://en.wikipedia.org/wiki/Algorithmic_bias"
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Isovist", 
+            "description": "The polygon formed by all visible points from a specific location." 
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Strategic Visibility", 
+            "description": "The use of geometry to control who can see and who can be seen." 
+        }
+      ],
+
+      "hasPart": [
+        { 
+            "@type": "CreativeWork", 
+            "name": "Algorithmic Containment", 
+            "description": "The binary logic of inclusion and exclusion in spatial computing." 
+        },
+        { 
+            "@type": "CreativeWork", 
+            "name": "Algorithmic Movement", 
+            "description": "The computation of paths, links, and agent behaviors." 
+        },
+        { 
+            "@type": "CreativeWork", 
+            "name": "Algorithmic Attention", 
+            "description": "The calculation of visibility, isovists, and spatial hierarchy." 
+        }
+      ]
+    }
+      </script>
+
+    <style>
+        /* TBH STANDARD CSS - ACADEMIC MINIMALISM (Helvetica Neue) */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfd;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-weight: 800;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+            color: #111;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 4rem;
+            border-left: 4px solid #111;
+            padding-left: 20px;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 5rem;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ddd;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .meta-info {
+            font-family: monospace;
+            color: #888;
+            margin-bottom: 60px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* DEFINITION STACK (Standardized) */
+        .def-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-left: 10px;
+        }
+
+        .def-item {
+            width: 100%; 
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .def-item h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #444;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .def-item p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+        }
+        
+        .def-item .concept-def {
+             font-size: 0.95rem;
+             color: #555;
+        }
+
+        /* IMAGE HOLDERS */
+        .figure-box {
+            background-color: #f9f9f9;
+            border: 1px dashed #ccc;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+            color: #888;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        
+        /* AXIOMS GRID LAYOUT */
+    .quote-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 30px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    /* RESPONSIVE: Stack vertically on mobile */
+    @media (max-width: 700px) {
+        .quote-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+             
+        /* AXIOM BOXES */
+        .axiom {
+            background: #222;
+            color: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .axiom cite {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaa;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        .book-hero {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 60px;
+        align-items: flex-start;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 40px;
+    }
+
+    .book-cover-container {
+        flex: 0 0 250px; /* Fixed width for cover */
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .book-cover-img {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .book-actions {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .action-text {
+        font-size: 1.1rem;
+        color: #444;
+        margin-bottom: 25px;
+        font-style: italic;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn {
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: all 0.2s ease;
+    }
+
+    /* Primary Button (Routledge) - Black */
+    .btn-primary {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #000;
+    }
+    .btn-primary:hover {
+        background-color: #333;
+    }
+
+    /* Secondary Button (Amazon) - White/Outline */
+    .btn-secondary {
+        background-color: transparent;
+        color: #000;
+        border: 2px solid #000;
+    }
+    .btn-secondary:hover {
+        background-color: #f4f4f4;
+    }
+        
+        /* DIAGRAM STYLING */
+        .diagram-container {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .diagram-container img { max-width: 100%; height: auto; }
+        .caption { font-size: 0.9rem; color: #666; margin-top: 1rem; display: block; }
+
+        /* CITATION BOX */
+        .citation-box {
+            background: #f4f4f4;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-left: 4px solid #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>The Hidden Lives of Algorithms</h1>
+        <div class="subtitle">Geometry and Social Meaning in Architecture</div>
+        
+        <div class="meta-info">
+            By Philip D. Plowright & Silvio Carta<br>
+            Publisher: Routledge | ISBN: 978-1041003748 | 978-1041003779 | 978-1003609506
+        </div>
+    </header>
+
+        <div class="book-hero">
+    <div class="book-cover-container">
+        <img src="assets/Cover-THLA.jpg" alt="Book Cover" class="book-cover-img">
+    </div>
+
+    <div class="book-actions">
+        <div class="action-text">
+            "Available in Hardback, Paperback, and eBook editions."
+        </div>
+        
+        <div class="button-group">
+            <a href="https://www.routledge.com/The-Hidden-Lives-of-Algorithms-Geometry-and-Social-Meaning-in-Architecture/DPlowright-Carta/p/book/9781041003748" class="btn btn-primary" target="_blank">View at Routledge</a>
+            
+            <a href="https://www.amazon.com/Hidden-Lives-Algorithms-Geometry-Architecture-ebook/dp/B0FMRV8721" class="btn btn-secondary" target="_blank">Order on Amazon</a>
+        </div>
+    </div>
+</div>
+    
+    <section>
+        <p style="font-size: 1.2rem; max-width: 800px;">
+            In the digital age, we often mistake algorithms for neutral tools and geometry for pure shape. This is a dangerous fallacy. Every line drawn by code carries the weight of the assumptions built into that code.</p> 
+        <p style="font-size: 1.2rem; max-width: 800px;">
+            This text investigates the intersection of geometry, computation, and social meaning. It argues that the algorithms are not neutral tools. When we draw lines, circles, and points to describe the shape of our cities, we are encoding predetermined social interactions. This book examines the <strong>geometric operations</strong> that shape dynamics of equity, connectivity, privacy, and power. By dissecting the geometry of the line, the circle, and the point through a socio-cognitive lens, we reveal how computational tools secretly curate the social lives of the people who inhabit them.        
+        </p>
+    </section>
+
+    <section>
+        <h2>I. Containment (Binary Logic)</h2>
+        <p><em>The fundamental algorithmic act: dividing the world into "0" (Outside) and "1" (Inside).</em></p>
+        
+        <div class="def-stack">
+            <div class="def-item">
+                <h3>The Boundary</h3>
+                <div class="concept-def">Before an algorithm can calculate anything, it must define a domain. The boundary is the geometric line that creates a binary condition: Member vs. Non-Member.</div>
+            </div>
+            <div class="def-item">
+                <h3>Occlusion</h3>
+                <div class="concept-def">The blockage of connection. Occlusion is the geometric origin of privacy, secrecy, and mystery. It is the algorithm of "who cannot see."</div>
+            </div>
+            <div class="def-item">
+                <h3>Partitioning</h3>
+                <div class="concept-def">The algorithmic subdivision of space (e.g., Voronoi diagrams). Partitioning automates the creation of territory, often ignoring human nuance in favor of mathematical efficiency.</div>
+            </div>
+        </div>
+        
+        <div class="diagram-container">
+             <img src="assets/THLA-partitioning.jpg" alt="Voroni and Delauney spatial division">
+            <br>
+            <small>Algorithmic Partitioning</small>
+        </div>
+    </section>
+
+    <section>
+        <h2>II. Movement (Connection Logic)</h2>
+        <p><em>How algorithms calculate distance, efficiency, and relationships.</em></p>
+        
+        <div class="def-stack">
+            <div class="def-item">
+                <h3>The Link</h3>
+                <div class="concept-def">The basic unit of connection. In Graph Theory, a link (edge) represents a relationship between two spaces (nodes). No link means no relationship.</div>
+            </div>
+            <div class="def-item">
+                <h3>Integration</h3>
+                <div class="concept-def">A measure of "closeness." Algorithms calculate how many steps it takes to get from Space A to everywhere else. High integration equals high social potential.</div>
+            </div>
+            <div class="def-item">
+                <h3>Agents</h3>
+                <div class="concept-def">Digital actors. We simulate human movement using "Agents" that follow simple rules. However, agents optimize for math (shortest path), while humans optimize for experience (safe path).</div>
+            </div>
+        </div>
+
+        <div class="diagram-container">
+            <img src="assets/THLA-path.jpg" alt="Voroni and Delauney spatial division">
+            <br>
+            <small>Graph Theory/Shortest Path analysis. Visualizing the invisible structure of connection.</small>
+        </div>
+    </section>
+
+    <section>
+        <h2>III. Attention (Visibility Logic)</h2>
+        <p><em>How algorithms determine what is important by calculating what can be seen.</em></p>
+        
+        <div class="def-stack">
+            <div class="def-item">
+                <h3>The Isovist</h3>
+                <div class="concept-def">The "View Field." A polygon representing everything visible from a single point (360 degrees). Algorithms use this to measure how much information a human can access.</div>
+            </div>
+            <div class="def-item">
+                <h3>Strategic Visibility</h3>
+                <div class="concept-def">The manipulation of geometry to control attention. By narrowing or widening the isovist, design dictates what is perceived as important.</div>
+            </div>
+            <div class="def-item">
+                <h3>Asymmetry</h3>
+                <div class="concept-def">Power dynamics. If Point A can see Point B, but Point B cannot see Point A (e.g., a Panopticon), the algorithm creates a hierarchy of control.</div>
+            </div>
+        </div>
+
+        <div class="diagram-container">
+            <img src="assets/THLA-attention.jpg" alt="Voroni and Delauney spatial division">     
+            <br>
+            <small>Between centrality and the manipulation of bias through nodal density.</small>
+        </div>
+    </section>
+
+    <section>
+        <h2>IV. Computational Axioms</h2>
+                <div class="quote-grid">
+        <div class="axiom">
+            "To draw a boundary is to create an outsider. The algorithm accepts no ambiguity between member and non-member."
+            <cite>— On Containment</cite>
+        </div>
+        <div class="axiom">
+            "Visibility is a form of capture. To strip someone of the right to occlusion is to subject them to the geometry of submission."
+            <cite>— On Exposure</cite>
+        </div>
+        <div class="axiom">
+            "The shortest path is a mathematical efficiency, not a human one. Humans optimize for meaning, not just distance."
+            <cite>— On Agents</cite>
+        </div>
+        <div class="axiom">
+            "Bias is not a glitch in the code; it is a feature of the geometry we chose to draw."
+            <cite>— On Design</cite>
+        </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; Philip D. Plowright. Text curated from <em>The Hidden Lives of Algorithms</em> (Routledge).</p>
+        <p><a href="https://www.throughbeinghuman.com">Return to throughbeinghuman.com</a></p>
+    </footer>
+
+</div>
+
+</body>
+</html>

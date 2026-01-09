@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Design Made by Humans: Core Assemblages</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Book", "LearningResource"],
+      "name": "Urban Design Made by Humans: A Handbook of Design Ideas",
+      "educationalUse": "Instruction",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "Urban Designer"
+      },
+      "inLanguage": "en-US",
+      "isbn": "978-1032185170",
+      "sameAs": "https://www.wikidata.org/wiki/Q137733907",
+      "genre": ["Urban Design", "Architectural Theory", "Cognitive Semantics"],
+      "keywords": "Urban Infrastructure, Public Space, Embodied Cognition, Social Resilience, City Planning",
+      "author": [
+        {
+            "@type": "Person",
+            "name": "Anirban Adhya",
+            "affiliation": { "@type": "Organization", "name": "Lawrence Technological University" }
+        },
+        {
+            "@type": "Person",
+            "name": "Philip D. Plowright",
+            "sameAs": "https://www.wikidata.org/wiki/Q112485316",
+            "url": "https://www.throughbeinghuman.com",
+            "sameAs": [
+            "https://orcid.org/0000-0002-8896-0609",
+            "https://www.researchgate.net/profile/Philip-Plowright",
+            "https://www.linkedin.com/in/plowright/",
+            "https://ltu.academia.edu/PhilipPlowright"
+            ]
+        }
+      ],
+      "publisher": "Routledge",
+      "datePublished": "2023",
+      "hasPart": [
+        { "@type": "CreativeWork", "name": "The Legibility Chain", "description": "Assemblage linking Pattern, Rhyme, Legibility, and Coherence." },
+        { "@type": "CreativeWork", "name": "The Publicness Chain", "description": "Assemblage linking Path, Node, Co-Presence, and Publicness." },
+        { "@type": "CreativeWork", "name": "The Resilience Chain", "description": "Assemblage linking Complexity, Diversity, Choice, and Resilience." },
+        { "@type": "CreativeWork", "name": "The Meaning Chain", "description": "Assemblage linking Space, Character, Identity, and Place." }
+      ],
+      "about": [
+        { "@type": "DefinedTerm", "name": "Embodied Urbanism", "description": "The theory that urban design is based on the feedback loop between human senses and the built environment." },
+        { "@type": "DefinedTerm", "name": "Urban Legibility", "description": "The potential to organize an environment into a recognizable pattern to introduce understanding." },
+        { "@type": "DefinedTerm", "name": "Co-Presence", "description": "The state of being physically near others in a shared space, forming the basis of public life." }
+      ]
+    }
+    </script>
+
+    <style>
+        /* MATCHED AESTHETIC - STABILIZED LAYOUT */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfd;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-weight: 800;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+            color: #111;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 4rem;
+            border-left: 4px solid #111;
+            padding-left: 20px;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 5rem;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ddd;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+       .meta-info {
+            font-family: monospace;
+            color: #888;
+            margin-bottom: 60px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        
+        /* ASSEMBLAGE SECTION STYLING */
+        .assemblage-section {
+            margin-bottom: 60px;
+        }
+
+        .chain-visual {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            background: #f4f4f4;
+            padding: 25px;
+            border-radius: 4px;
+        }
+
+        .chain-item {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .chain-arrow {
+            color: #aaa;
+            font-size: 1.2rem;
+        }
+
+        .chain-final {
+            color: #000;
+            border-bottom: 3px solid #000;
+            padding-bottom: 2px;
+        }
+
+        /* DEFINITION LIST - STACKED */
+        .def-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-left: 10px;
+        }
+
+        .def-item {
+            width: 100%; 
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .def-item h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #444;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .def-item p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+        }
+        
+        .def-item .concept-def {
+             font-size: 0.95rem;
+             color: #555;
+        }
+
+        /* IMAGE HOLDERS */
+        .figure-box {
+            background-color: #f9f9f9;
+            border: 1px dashed #ccc;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+            color: #888;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        
+        .section-intro {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        /* QUOTE BANK */
+        .axiom {
+            background: #222;
+            color: #fff;
+            padding: 30px;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .axiom cite {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaa;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        .book-hero {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 60px;
+        align-items: flex-start;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 40px;
+    }
+
+    .book-cover-container {
+        flex: 0 0 250px; /* Fixed width for cover */
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .book-cover-img {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .book-actions {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .action-text {
+        font-size: 1.1rem;
+        color: #444;
+        margin-bottom: 25px;
+        font-style: italic;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn {
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: all 0.2s ease;
+    }
+
+    /* Primary Button (Routledge) - Black */
+    .btn-primary {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #000;
+    }
+    .btn-primary:hover {
+        background-color: #333;
+    }
+
+    /* Secondary Button (Amazon) - White/Outline */
+    .btn-secondary {
+        background-color: transparent;
+        color: #000;
+        border: 2px solid #000;
+    }
+    .btn-secondary:hover {
+        background-color: #f4f4f4;
+    }
+        
+        /* DIAGRAM STYLING */
+        .diagram-container {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .diagram-container img { max-width: 100%; height: auto; }
+        .caption { font-size: 0.9rem; color: #666; margin-top: 1rem; display: block; }
+
+        /* CITATION BOX */
+        .citation-box {
+            background: #f4f4f4;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-left: 4px solid #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Urban Design Made by Humans</h1>
+        <div class="subtitle">A Handbook of Design Ideas (... for the City)</div>    
+        <div class="meta-info">
+            By Anriban Adhya & Philip D. Plowright<br>
+            Publisher: Routledge | ISBN: 978-1032185194 | 978-1032185170 | 978-1003254935
+        </div>
+    </header>
+
+        <div class="book-hero">
+    <div class="book-cover-container">
+        <img src="assets/Cover-UDMBH.jpg" alt="Book Cover" class="book-cover-img">
+    </div>
+
+    <div class="book-actions">
+        <div class="action-text">
+            "Available in Hardback, Paperback, and eBook editions."
+        </div>
+        
+        <div class="button-group">
+            <a href="https://www.routledge.com/Urban-Design-Made-by-Humans-A-Handbook-of-Design-Ideas/Adhya-Plowright/p/book/9781032185194" class="btn btn-primary" target="_blank">View at Routledge</a>
+            
+            <a href="https://www.amazon.com/Urban-Design-Made-Humans-Handbook/dp/1032185198" class="btn btn-secondary" target="_blank">Order on Amazon</a>
+        </div>
+    </div>
+</div>
+    
+    <section>
+        <p style="font-size: 1.2rem; max-width: 800px;">
+            The act of design is not making objects or producing drawings. <strong>Design is the thinking process</strong> behind those outcomes. This handbook extends the cognitive frameworks of <em>Making Architecture</em> into the urban realm, exploring how we shape our cities through massing, infrastructure, and habitation. We argue that the city is a vast assemblage of social agreements linked by infrastructure. By using the same cognitive tools we use for buildings —  such as containment, porosity, and visibility — we can understand how urban form supports human behavior. This book isolates the specific design operations that transform a 'space' (a geographic quantity) into a 'place' (a social quality), focusing on how physical geometry creates the potential for public life.
+        </p>
+    </section>
+
+    <section>
+        <h2>I. Core Definitions</h2>
+        <p><em>The fundamental components of the urban environment.</em></p>
+        
+        <div class="def-stack">
+            <div class="def-item">
+                <h3>Massing</h3>
+                <div class="concept-def">All the physical objects in an urban area, such as buildings, signs, and street furniture. Massing defines the edges and volumes of the city.</div>
+            </div>
+            <div class="def-item">
+                <h3>Infrastructure</h3>
+                <div class="concept-def">The underlying support that makes a city work. This includes <strong>Grey</strong> (roads, sewers), <strong>Blue</strong> (water systems), and <strong>Green</strong> (natural resources) infrastructure.</div>
+            </div>
+            <div class="def-item">
+                <h3>Habitation</h3>
+                <div class="concept-def">People. It is how they live which, ultimately, is why the city exists. Both massing and infrastructure affect, and are affected by, habitation patterns.</div>
+            </div>
+            <div class="def-item">
+                <h3>Embodied Thinking</h3>
+                <div class="concept-def">The feedback loop where our bodily experiences (movement, sight) structure our thinking, and our thinking then influences how we act in the environment.</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>II. The Assemblages</h2>
+        <p><em>The Syntax. How simple urban concepts link together to form complex social agreements.</em></p>
+
+        <div class="assemblage-section">
+            <h3>01. The Legibility Chain</h3>
+            <div class="chain-visual">
+                <span class="chain-item">Pattern</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Rhyme</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Legibility</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item chain-final">Coherence</span>
+            </div>
+            
+            <div class="def-stack">
+                <div class="def-item">
+                    <h3>Pattern</h3>
+                    <p>A type of repetition that brings regularity. We use patterns to reduce the mental stress of encountering the unknown.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Rhyme</h3>
+                    <p>A pattern based on <strong>similarity</strong>. When things in the city look similar but are not exactly the same (e.g., rooflines, window rhythms), they form a rhyme.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Legibility</h3>
+                    <p>The potential to organise the city into a recognisable pattern. Legibility creates understanding.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Coherence</h3>
+                    <p>When several elements align towards a single objective or focus. Coherence is the result of legibility and makes the city "make sense."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="assemblage-section">
+            <h3>02. The Publicness Chain</h3>
+            <div class="chain-visual">
+                <span class="chain-item">Path</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Node</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Co-Presence</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item chain-final">Publicness</span>
+            </div>
+
+            <div class="def-stack">
+                <div class="def-item">
+                    <h3>Path</h3>
+                    <p>A line of movement facilitating human bodies in space. A projection of intention.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Node</h3>
+                    <p>A place of gathering or intersection. Nodes interrupt paths and create the opportunity for choice.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Co-Presence</h3>
+                    <p>The state of being physically near others. The fundamental requirement for social interaction.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Publicness</h3>
+                    <p>The shared agreement that a space belongs to everyone. It emerges from accessibility, visibility, and co-presence.</p>
+                </div>
+            </div>
+            
+            <div class="diagram-container">
+                <img src="assets/UDMBH_publicness.jpg" alt="publicness through movement and gathering">
+            <br>
+            <small>Publicness gradient based on MOVEMENT and GATHERING</small>
+            </div>
+        </div>
+
+        <div class="assemblage-section">
+            <h3>03. The Resilience Chain</h3>
+            <div class="chain-visual">
+                <span class="chain-item">Complexity</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Diversity</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Choice</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item chain-final">Resilience</span>
+            </div>
+
+            <div class="def-stack">
+                <div class="def-item">
+                    <h3>Complexity</h3>
+                    <p>A richness of information. Complexity maintains interest but requires order to avoid chaos.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Diversity</h3>
+                    <p>The degree of variation (formal or social) within a unified whole. Diversity allows us to understand relationships through difference.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Choice</h3>
+                    <p>The ability to have agency. Alternative choices in mobility, use, and density create flexibility.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Resilience</h3>
+                    <p>The ability of an urban system to adapt to change. Resilience is born from the redundancy of choice and diversity.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="assemblage-section">
+            <h3>04. The Meaning Chain</h3>
+            <div class="chain-visual">
+                <span class="chain-item">Space</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Character</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Identity</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item chain-final">Place</span>
+            </div>
+
+            <div class="def-stack">
+                <div class="def-item">
+                    <h3>Space</h3>
+                    <p>The void between objects. The medium of relationships.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Character</h3>
+                    <p>The distinguishing feature that makes one thing different from another. We often project human personality onto urban character.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Identity</h3>
+                    <p>The recognition of that character as a specific, named entity.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Place</h3>
+                    <p>Space plus Meaning. When a location acquires social value and memory, it becomes a Place.</p>
+                </div>
+            </div>
+            
+            <div class="diagram-container">
+                <img src="assets/UDMBH_place.jpg" alt="Place, time and memory">
+            <br>
+            <small>Place through TIME and MEMORY</small>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>III. Axioms</h2>
+        <div class="axiom">
+            "Spatial hierarchy is something that people decide rather than something that is decided for us."
+            <cite>— On Hierarchy</cite>
+        </div>
+        <div class="axiom">
+            "We begin with physical experiences of movement and seeing to understand more abstract experiences such as value judgements."
+            <cite>— On Embodiment</cite>
+        </div>
+        <div class="axiom">
+            "At the core of urban design is a simple idea—our urban spaces are designed to allow people and communities to thrive."
+            <cite>— On Purpose</cite>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Anirban Adhya and Philip D. Plowright. Text extracted from <em>Urban Design Made by Humans</em> (Routledge).
+        <br><a href="index.html">Return to Index</a></p>
+    </footer>
+
+</div>
+
+</body>
+</html>

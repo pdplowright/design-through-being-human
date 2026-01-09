@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revealing Architectural Design: The Conceptual Core</title>
+    
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Book", "LearningResource"],
+      "name": "Revealing Architectural Design: Methods, Frameworks and Tools",
+      "inLanguage": "en-US",
+      "isbn": "978-0415639019",
+          "sameAs": "https://www.wikidata.org/wiki/Q137733031",
+      "genre": ["Architectural Theory", "Design Methodology"],
+      "keywords": "Design Frameworks, Cognitive Semantics, Architectural Education, Design Thinking, Embodied Cognition",
+      "author": {
+        "@type": "Person",
+        "name": "Philip D. Plowright",
+        "sameAs": "https://www.wikidata.org/wiki/Q112485316",
+        "jobTitle": "Professor and Chair, Department of Design",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Lawrence Technological University"
+        },
+        "url": "https://www.throughbeinghuman.com",
+        "sameAs": [
+            "https://orcid.org/0000-0002-8896-0609",
+            "https://www.researchgate.net/profile/Philip-Plowright",
+            "https://www.linkedin.com/in/plowright/",
+            "https://ltu.academia.edu/PhilipPlowright"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Routledge"
+      },
+      "datePublished": "2014",
+      "about": [
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Pattern-Based Framework", 
+            "description": "A design methodology based on typological transfer, cultural continuity, and the adaptation of existing precedents." 
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Force-Based Framework", 
+            "description": "A design methodology that generates form by mapping external pressures, data, and program to deform a neutral container." 
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Concept-Based Framework", 
+            "description": "A design methodology organized by an abstract idea or metaphor that is translated into spatial terms." 
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Domain-to-Domain Transfer", 
+            "description": "The cognitive process of moving knowledge from a Source Domain (e.g., Biology) to the Target Domain (Architecture) via syntax translation." 
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Design Framing", 
+            "description": "The cognitive act of limiting the scope of a wicked problem to make it actionable." 
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Architectural Coherence", 
+            "description": "The alignment of multiple elements (structure, circulation, envelope) to a single objective through reinforcement." 
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Versioning", 
+            "description": "A divergent design tool involving the rapid generation of multiple variations of a single idea to explore limits." 
+        },
+        { 
+            "@type": "DefinedTerm", 
+            "name": "Deformation", 
+            "description": "A force-based operation where a standard type is physically altered by the application of site or program pressures." 
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        /* TYPOGRAPHY & LAYOUT - MATCHING TBH AESTHETIC */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #2a2a2a;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        a { color: #666; text-decoration: underline; }
+        a:hover { color: #000; }
+
+        /* HEADINGS */
+        h1 {
+            font-weight: 800;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+        
+        h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 4rem;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #000;
+            letter-spacing: -0.5px;
+        }
+
+        h3 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .meta-info {
+            font-family: monospace;
+            color: #888;
+            margin-bottom: 60px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            color: #555;
+            font-weight: 300;
+            margin-bottom: 4rem;
+            border-left: 4px solid #000;
+            padding-left: 20px;
+        }
+
+        /* CONCEPT CARDS - FLEXBOX UPDATE */
+        .concept-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .concept-card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-left: 1px solid #ddd;
+            /* Flexbox ensures equal height and bottom alignment */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%; 
+            box-sizing: border-box; /* Ensures padding doesn't expand width */
+        }
+
+        .concept-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+            color: #444;
+        }
+
+        /* DIAGRAM STYLING - UPDATED */
+        .diagram-container {
+            background: #fff;
+            border: 1px solid #eee;
+            padding: 1rem;
+            margin-top: auto; /* This pushes the image to the bottom */
+            margin-bottom: 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .diagram-container img { 
+            width: 100%; /* Force fill width */
+            height: auto; 
+            display: block; /* Removes tiny bottom gap */
+        }
+        .caption { font-size: 0.9rem; color: #666; margin-top: 1rem; display: block; }
+
+
+        /* DEFINITION LISTS */
+        dl.lexicon {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        dt {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        dd {
+            margin-left: 0;
+            padding-left: 20px;
+            border-left: 2px solid #eee;
+            color: #444;
+        }
+
+        /* QUOTE BANK */
+        .quote-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        @media (max-width: 700px) { .quote-grid { grid-template-columns: 1fr; } }
+
+        .axiom {
+            background: #222;
+            color: #fff;
+            padding: 30px;
+            font-size: 1.05rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .axiom cite {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #aaa;
+        }
+
+        /* GENERAL IMAGE HOLDERS */
+        .figure-box {
+            background-color: #f4f4f4;
+            border: 1px solid #e0e0e0;
+            padding: 60px;
+            text-align: center;
+            margin: 40px 0;
+            color: #888;
+            font-family: monospace;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+        .book-hero {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 60px;
+        align-items: flex-start;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 40px;
+    }
+
+    .book-cover-container {
+        flex: 0 0 250px; /* Fixed width for cover */
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .book-cover-img {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .book-actions {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .action-text {
+        font-size: 1.1rem;
+        color: #444;
+        margin-bottom: 25px;
+        font-style: italic;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn {
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: all 0.2s ease;
+    }
+
+    /* Primary Button (Routledge) - Black */
+    .btn-primary {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #000;
+    }
+    .btn-primary:hover {
+        background-color: #333;
+    }
+
+    /* Secondary Button (Amazon) - White/Outline */
+    .btn-secondary {
+        background-color: transparent;
+        color: #000;
+        border: 2px solid #000;
+    }
+    .btn-secondary:hover {
+        background-color: #f4f4f4;
+    }
+        
+  
+    .book-hero {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 60px;
+        align-items: flex-start;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 40px;
+    }
+
+    .book-cover-container {
+        flex: 0 0 250px; /* Fixed width for cover */
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .book-cover-img {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .book-actions {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .action-text {
+        font-size: 1.1rem;
+        color: #444;
+        margin-bottom: 25px;
+        font-style: italic;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn {
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: all 0.2s ease;
+    }
+
+    /* Primary Button (Routledge) - Black */
+    .btn-primary {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #000;
+    }
+    .btn-primary:hover {
+        background-color: #333;
+    }
+
+    /* Secondary Button (Amazon) - White/Outline */
+    .btn-secondary {
+        background-color: transparent;
+        color: #000;
+        border: 2px solid #000;
+    }
+    .btn-secondary:hover {
+        background-color: #f4f4f4;
+    }
+        
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Revealing Architectural Design</h1>
+        <div class="subtitle">A repository of core frameworks, cognitive tools, and definitions for the architectural domain.</div>
+      <div class="meta-info">
+            By Philip D. Plowright<br>
+            Publisher: Routledge | ISBN: 978-0415639026 | 978-0415639019 | 978-1315852454
+        </div>
+    </header>
+    
+    
+    <div class="book-hero">
+    <div class="book-cover-container">
+        <img src="assets/Cover-RAD.jpg" alt="Book Cover" class="book-cover-img">
+    </div>
+
+    <div class="book-actions">
+        <div class="action-text">
+            "Available in Hardback, Paperback, and eBook editions."
+        </div>
+        
+        <div class="button-group">
+            <a href="https://www.routledge.com/Revealing-Architectural-Design-Methods-Frameworks-and-Tools/Plowright/p/book/9780415639026" class="btn btn-primary" target="_blank">View at Routledge</a>
+            
+            <a href="https://www.amazon.com/Revealing-Architectural-Design-Methods-Frameworks/dp/0415639026/" class="btn btn-secondary" target="_blank">Order on Amazon</a>
+        </div>
+    </div>
+</div>
+    
+
+    <section>
+        <p style="font-size: 1.2rem; font-weight: 400; margin-top: 20px;">Architectural pedagogy has historically divided into two opposing camps: the <em>Designer-Artist</em>, who fears methodology undermines intuition, and the <em>Designer-Scientist</em>, who seeks a rigid, repeatable formula. <em>Revealing Architectural Design</em> rejects this binary. It argues that successful design relies on <strong>frameworks</strong>—meta-organizational structures that guide thinking without dictating outcomes.</p>
+        
+        <p style="font-size: 1.2rem; font-weight: 400; margin-top: 20px;">
+            This text rejects the "black box" myth of architectural creativity. It argues that design is a knowledge-based discipline that relies on explicit frameworks to manage complexity. The following concepts constitute the core operational syntax of the book.
+        </p>
+        
+        <div class="diagram-container" style="max-width: 600px; margin: 30px auto;">
+            <img src="assets/theory-and-methodology.jpg" alt="conceptual diagram of sequencial thinking structures in design">
+            <br>
+            <small>Placing theory in relation to methodology.</small>
+        </div>
+    </section>
+
+    <section>
+        <h2>I. The Three Frameworks</h2>
+        <p>Frameworks are meta-organizational structures. They are the scaffold for addressing content, not the content itself.</p>
+
+        <div class="concept-section">
+            <div class="concept-card">
+                <div>
+                    <span class="concept-title">Framework 01</span>
+                    <h3>Pattern-Based</h3>
+                    <p><strong>Definition:</strong> Design that begins with typological transfer. It identifies rules from existing precedents (patterns) and adapts them.</p>
+                    <p><strong>Primary Operation:</strong> Adaptation & Modification.</p>
+                    <p><strong>Bias:</strong> Cultural continuity, history, and efficiency.</p>
+                    <p><strong>Risk:</strong> Cliché (repetition without critical thought).</p>
+                </div>
+                <div class="diagram-container"> 
+                    <img src="assets/Framework-pattern.png" alt="Pattern-based framework conceptual seed">
+                </div>
+            </div>
+            
+            <div class="concept-card">
+                <div>
+                    <span class="concept-title">Framework 02</span>
+                    <h3>Force-Based</h3>
+                    <p><strong>Definition:</strong> Design as a reaction to pressure. Form is generated by mapping external "forces" (data, site, program, time) to deform a neutral container.</p>
+                    <p><strong>Primary Operation:</strong> Mapping & Deformation.</p>
+                    <p><strong>Bias:</strong> Performance, emergence, and complexity.</p>
+                    <p><strong>Risk:</strong> Automation (loss of human intent).</p>
+                </div>
+                <div class="diagram-container">
+                    <img src="assets/Framework-force.png" alt="Force-based framework conceptual seed">
+                </div>
+            </div>
+
+            <div class="concept-card">
+                <div>
+                    <span class="concept-title">Framework 03</span>
+                    <h3>Concept-Based</h3>
+                    <p><strong>Definition:</strong> Design driven by an abstract idea or metaphor. The building is a physical translation of a non-physical thought.</p>
+                    <p><strong>Primary Operation:</strong> Translation (Domain-to-Domain Transfer).</p>
+                    <p><strong>Bias:</strong> Meaning, semantics, and intellectual coherence.</p>
+                    <p><strong>Risk:</strong> Irrelevance (symbolism that fails to function).</p>
+                </div>
+                <div class="diagram-container"> 
+                    <img src="assets/Framework-concept.png" alt="Concept-based framework conceptual seed">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>II. Cognitive Tools (How we Think)</h2>
+        <dl class="lexicon">
+            <dt>Divergent vs. Convergent Thinking</dt>
+            <dd>Design is not a single mode of thought. It is the coupling of <strong>Divergent thinking</strong> (exploratory, displacing the expected, generating options) and <strong>Convergent thinking</strong> (evaluative, narrowing options, testing against criteria). Quality emerges from the cycle between them.</dd>
+            
+            <dt>Framing</dt>
+            <dd>The cognitive act of selecting a specific perspective to limit the scope of a design problem. Since design problems are "wicked" (unsolvable in their entirety), framing allows the designer to make the problem actionable by excluding certain information.</dd>
+
+            <dt>Heuristics</dt>
+            <dd>Cognitive shortcuts or "rules of thumb" used to make decisions when information is incomplete. In architecture, heuristics replace the scientific requirement for 100% data certainty, allowing the designer to move forward.</dd>
+
+            <dt>Domain-to-Domain Transfer</dt>
+            <dd>The process of moving knowledge from a <em>Source Domain</em> (e.g., Biology, Music, Philosophy) to the <em>Target Domain</em> (Architecture). This requires translating the logic of the source into the <strong>Domain Syntax</strong> of architecture (space, material, light).</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>III. Design Operations (What we Do)</h2>
+        <dl class="lexicon">
+            <dt>The Diagram</dt>
+            <dd>Distinct from a sketch or a drawing. A diagram is an abstract graphic tool that explains <em>relationships, forces, and organizations</em>. It ignores the visual appearance of the building to focus on its underlying logic.</dd>
+
+            <dt>Coherence (Reinforcement)</dt>
+            <dd>A measure of design quality. Coherence exists when multiple elements in a project (structure, circulation, envelope) reinforce a single conceptual objective. It is the antidote to randomness.</dd>
+
+            <dt>Deformation</dt>
+            <dd>A Force-based operation where a standard type or neutral form is physically altered by the application of site pressures or programmatic requirements.</dd>
+
+            <dt>Versioning</dt>
+            <dd>A divergent tool involving the rapid generation of multiple variations of a single idea to explore its limits before selection.</dd>
+        </dl>
+    </section>
+
+    <section>
+        <h2>IV. Axioms & Quotations</h2>
+        <div class="quote-grid">
+            <div class="axiom">
+                "Recipes are just information we can access, select, refine, and interpret freely. But the intelligence coded into the recipe is the strategic design component of how value is conceptualized."
+                <cite>— On Methodology</cite>
+            </div>
+            <div class="axiom">
+                "Architecture should be considered first and foremost as the practice of theory-crafting possible manifestations of effect within social space."
+                <cite>— On The Discipline</cite>
+            </div>
+            <div class="axiom">
+                "Frameworks are a scaffold for addressing content rather than the content itself."
+                <cite>— On Frameworks</cite>
+            </div>
+            <div class="axiom">
+                "Design methods are generative. However, most of the approaches from the scientific camp are analytical. The approach is good at identifying what we have done but not what we will do."
+                <cite>— On Analysis vs. Design</cite>
+            </div>
+            <div class="axiom">
+                "Innovation is not the rejection of history, but the critical reinterpretation of it through the lens of current problems."
+                <cite>— On Innovation</cite>
+            </div>
+            <div class="axiom">
+                "To use external knowledge (from biology or philosophy), it must be translated through Domain-to-Domain Transfer. Without translation, it is merely collage."
+                <cite>— On Syntax</cite>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Philip D. Plowright. Text extracted and curated from <em>Revealing Architectural Design</em> (Routledge).
+        <br><a href="index.html">Return to Index</a></p>
+    </footer>
+
+</div>
+
+</body>
+</html>

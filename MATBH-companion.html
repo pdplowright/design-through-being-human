@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Architecture Through Being Human: Core Assemblages</title>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Book", "LearningResource"],
+      "name": "Making Architecture Through Being Human: A Handbook of Design Ideas",
+      "educationalUse": "Instruction",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "Architectural Designer"
+      },
+      "inLanguage": "en-US",
+      "isbn": "978-0429261718",
+        "sameAs": "https://www.wikidata.org/wiki/Q137733848",
+      "genre": ["Architectural Theory", "Design Methodology", "Cognitive Linguistics"],
+      "keywords": "Design Frameworks, Cognitive Semantics, Architectural Education, Design Thinking, Embodied Cognition",
+      "author": {
+        "@type": "Person",
+        "name": "Philip D. Plowright",
+        "sameAs": "https://www.wikidata.org/wiki/Q112485316",
+        "jobTitle": "Professor and Chair, Department of Design",
+        "affiliation": {
+            "@type": "Organization",
+            "name": "Lawrence Technological University"
+        },
+        "url": "https://www.throughbeinghuman.com",
+        "sameAs": [
+            "https://orcid.org/0000-0002-8896-0609",
+            "https://www.researchgate.net/profile/Philip-Plowright",
+            "https://www.linkedin.com/in/plowright/",
+            "https://ltu.academia.edu/PhilipPlowright"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Routledge"
+      },
+      "datePublished": "2020",
+      "hasPart": [
+        { "@type": "CreativeWork", "name": "The Movement Chain", "description": "Assemblage linking Axis, Path-Goal, Journey, Connectedness, and Procession." },
+        { "@type": "CreativeWork", "name": "The Center Chain", "description": "Assemblage linking Centrality, Containment, Interiority, Convexity, and Threshold." },
+        { "@type": "CreativeWork", "name": "The Identity Chain", "description": "Assemblage linking Front, Identity, Personification, and Presence." },
+        { "@type": "CreativeWork", "name": "The Privacy Chain", "description": "Assemblage linking Containment, Communality, Exposure, and Privacy." }
+      ],
+      "about": [
+        { "@type": "DefinedTerm", "name": "Architectural Assemblage", "description": "A conceptual chain linking geometric forms to complex social agreements." },
+        { "@type": "DefinedTerm", "name": "Procession Assemblage", "description": "The link between Axis, Path, Journey, Connectedness, and Procession." },
+        { "@type": "DefinedTerm", "name": "Interiority Assemblage", "description": "The link between Centrality, Containment, Interiority, Convexity, and Threshold." },
+        { "@type": "DefinedTerm", "name": "Presence Assemblage", "description": "The link between Front, Identity, Personification, and Presence." },
+        { "@type": "DefinedTerm", "name": "Privacy Assemblage", "description": "The link between Containment, Communality, Exposure, and Privacy." }
+      ]
+    }
+    </script>
+
+    <style>
+        /* TBH AESTHETIC - ACADEMIC MINIMALISM */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            background-color: #fdfdfd;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* TYPOGRAPHY */
+        h1 {
+            font-weight: 800;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+            color: #111;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            font-weight: 300;
+            margin-bottom: 4rem;
+            border-left: 4px solid #111;
+            padding-left: 20px;
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 5rem;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #ddd;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+         
+        .meta-info {
+            font-family: monospace;
+            color: #888;
+            margin-bottom: 60px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ASSEMBLAGE SECTION STYLING */
+        .assemblage-section {
+            margin-bottom: 60px;
+        }
+
+        .chain-visual {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            background: #f4f4f4;
+            padding: 25px;
+            border-radius: 4px;
+        }
+
+        .chain-item {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .chain-arrow {
+            color: #aaa;
+            font-size: 1.2rem;
+        }
+
+        .chain-final {
+            color: #000;
+            border-bottom: 3px solid #000;
+            padding-bottom: 2px;
+        }
+
+        /* DEFINITION LIST - CONVERTED TO STACK (NO COLUMNS) */
+        .def-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Space between items */
+            padding-left: 10px;
+        }
+
+        .def-item {
+            /* Full width block to prevent uneven columns */
+            width: 100%; 
+            border-bottom: 0px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .def-item h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #444;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .def-item p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+        }
+        
+        .def-item .concept-def {
+             font-size: 0.95rem;
+             color: #555;
+        }
+
+        /* IMAGE HOLDERS */
+        .figure-box {
+            background-color: #f9f9f9;
+            border: 1px dashed #ccc;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+            color: #888;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        
+        .section-intro {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+/* AXIOMS GRID LAYOUT */
+    .quote-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 30px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    /* RESPONSIVE: Stack vertically on mobile */
+    @media (max-width: 700px) {
+        .quote-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* INDIVIDUAL AXIOM CARD */
+    .axiom {
+        background: #222; /* Deep Charcoal/Black */
+        color: #f0f0f0;   /* Off-white text */
+        padding: 30px;
+        font-size: 1.05rem;
+        font-style: italic;
+        font-weight: 300;
+        line-height: 1.6;
+        border-left: 4px solid #555; /* Subtle border accent */
+    }
+
+    /* CITATION STYLE */
+    .axiom cite {
+        display: block;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #444;
+        font-size: 0.8rem;
+        font-style: normal;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #999; /* Muted grey */
+    }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+        }
+        
+      .book-hero {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 60px;
+        align-items: flex-start;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 40px;
+    }
+
+    .book-cover-container {
+        flex: 0 0 250px; /* Fixed width for cover */
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .book-cover-img {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .book-actions {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .action-text {
+        font-size: 1.1rem;
+        color: #444;
+        margin-bottom: 25px;
+        font-style: italic;
+    }
+
+    .button-group {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn {
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        transition: all 0.2s ease;
+    }
+
+    /* Primary Button (Routledge) - Black */
+    .btn-primary {
+        background-color: #000;
+        color: #fff;
+        border: 2px solid #000;
+    }
+    .btn-primary:hover {
+        background-color: #333;
+    }
+
+    /* Secondary Button (Amazon) - White/Outline */
+    .btn-secondary {
+        background-color: transparent;
+        color: #000;
+        border: 2px solid #000;
+    }
+    .btn-secondary:hover {
+        background-color: #f4f4f4;
+    }
+
+                /* DIAGRAM STYLING */
+        .diagram-container {
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .diagram-container img { max-width: 100%; height: auto; }
+        .caption { font-size: 0.9rem; color: #666; margin-top: 1rem; display: block; }
+
+        /* CITATION BOX */
+        .citation-box {
+            background: #f4f4f4;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-left: 4px solid #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Making Architecture Through Being Human</h1>
+        <div class="subtitle">Conceptual Assemblages: Linking Embodied Concepts to Spatial Composition</div>
+              <div class="meta-info">
+            By Philip D. Plowright<br>
+            Publisher: Routledge | ISBN: 978-0367204778 | 978-0367204761 | 978-0429261718
+        </div>
+    </header>
+
+        <div class="book-hero">
+    <div class="book-cover-container">
+        <img src="assets/Cover-MATHB.jpg" alt="Book Cover" class="book-cover-img">
+    </div>
+
+    <div class="book-actions">
+        <div class="action-text">
+            "Available in Hardback, Paperback, and eBook editions."
+        </div>
+        
+        <div class="button-group">
+            <a href="https://www.routledge.com/Making-Architecture-Through-Being-Human-A-Handbook-of-Design-Ideas/Plowright/p/book/9780367204778" class="btn btn-primary" target="_blank">View at Routledge</a>
+            
+            <a href="https://www.amazon.com/Making-Architecture-Through-Being-Human/dp/0367204770" class="btn btn-secondary" target="_blank">Order on Amazon</a>
+        </div>
+    </div>
+</div>
+    
+    <section>
+        <p style="font-size: 1.2rem; max-width: 800px;">
+            Architecture starts with the translation of embodied biological experience into social agreement before we layer on any more complex socio-cultural meaning. This studio companion book outlines the <strong>fundamental concepts</strong> (the raw biological inputs) and the <strong>assemblages</strong> (the complex chains of meaning) that designers use to create intelligible environments. Throught this, thee text serves as a 'cognitive lexicon' for design. It moves beyond the visual appreciation of architecture to examine the embodied roots of form and traces how simple learned inputs are translated into more complex scaffolding (like privacy, hierarchy, and territory). It argues that meaning in architecture is not an abstract intellectual game, but a direct projection of the human experience onto the built environment.
+        </p>
+    </section>
+
+    <section>
+        <h2>I. Fundamental Embodied Concepts</h2>
+        <p><em>The biological baseline. These are not cultural choices; they are mandates of the human body.</em></p>
+        
+        <div class="def-stack">
+            <div class="def-item">
+                <h3>Verticality (Up/Down)</h3>
+                <div class="concept-def">Driven by gravity. <strong>Up</strong> is associated with health, consciousness, and control. <strong>Down</strong> is associated with sickness, unconsciousness, and subjection. In architecture, height equals status.</div>
+            </div>
+            <div class="def-item">
+                <h3>Center / Periphery</h3>
+                <div class="concept-def">Driven by our field of vision. The <strong>Center</strong> is the location of importance, control, and the "Self." The <strong>Periphery</strong> is the location of service, dependence, and the "Other."</div>
+            </div>
+            <div class="def-item">
+                <h3>Front / Back</h3>
+                <div class="concept-def">Driven by our face. We interact with the world via the <strong>Front</strong> (vision/speech). The <strong>Back</strong> is vulnerable and unseen. Buildings replicate this with "Facades" (Faces) and "Service entries" (Backs).</div>
+            </div>
+            <div class="def-item">
+                <h3>Balance</h3>
+                <div class="concept-def">Driven by the inner ear. Physical stability is mapped to psychological stability. Asymmetrical or "leaning" forms create psychological tension (excitement or anxiety).</div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section>
+        <h2>II. Situated Notions</h2>
+        <p><em>Projection. How we map our bodily experience onto inanimate objects.</em></p>
+
+        <div class="def-stack">
+            <div class="def-item">
+                <h3>Personification</h3>
+                <div class="concept-def">We scan environments for faces. Facades are interpreted as having eyes (windows) and mouths (doors). We attribute emotion (aggressive, shy, welcoming) to these static compositions.</div>
+            </div>
+            <div class="def-item">
+                <h3>Containment</h3>
+                <div class="concept-def">We experience our own bodies as containers. We project this onto rooms. <strong>Inside</strong> is protected/known. <strong>Outside</strong> is exposed/unknown.</div>
+            </div>
+            <div class="def-item">
+                <h3>Path / Link</h3>
+                <div class="concept-def">The connection between two points. A path is not just geometry; it is a trajectory of <strong>intention</strong>.</div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section>
+        <h2>III. Socio-Spatial Ideas</h2>
+        <div class="section-intro">
+            <em>Interaction. How spatial geometry dictates the possibility of human events.</em>
+        </div>
+
+        <div class="def-stack">
+            <div class="def-item">
+                <h3>Type</h3>
+                <div class="term-def">
+                    Type is not just a category of building (e.g., "Library"). It is a set of compositional characteristics that suggests the <strong>possibility of events</strong>. A long, narrow space with central circulation supports specific behaviors (procession) and denies others (gathering).
+                </div>
+            </div>
+
+            <div class="def-item">
+                <h3>Convexity & Connectedness</h3>
+                <div class="term-def">
+                    <strong>Convexity</strong> refers to spaces where all points are visible to all other points (promoting social stability and gathering). <strong>Connectedness</strong> refers to the depth of a space from the street (controlling privacy and access).
+                </div>
+        <div class="diagram-container">
+                <img src="assets/MATBH_connectedness.jpg" alt="Connectedness and its relationship to circulation">
+            <br>
+              <small>Connectedness and circulation.</small>
+        </div>
+                </div>
+            </div>
+    </section>
+
+    <section>
+        <h2>IV. Assemblages (Systems of Meaning)</h2>
+        <p><em>The Syntax. How simple concepts link together to form complex architectural experiences.</em></p>
+        
+        <p style="font-size: 1.2rem; max-width: 800px; margin-top: 20px; margin-bottom: 30px;">
+            Architecture is not a collection of isolated terms; it is a syntax. We link simple biological concepts together to form complex social agreements. The following <strong>Assemblages</strong> map these cognitive chains.
+        </p>
+
+        <div class="assemblage-section">
+            <h3>01. The Movement Chain</h3>
+            <div class="chain-visual">
+                <span class="chain-item">Axis</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Path-Goal</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Journey</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Connectedness</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item chain-final">Procession</span>
+            </div>
+            
+            <div class="def-stack">
+                <div class="def-item">
+                    <h3>Axis</h3>
+                    <p>An imaginary line that points. It organizes attention and implies a direction, often terminating at a significant object.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Path-Goal</h3>
+                    <p>The activation of axis through movement. We identify a destination (goal) and the trajectory required to reach it (path).</p>
+                </div>
+                <div class="def-item">
+                    <h3>Journey</h3>
+                    <p>Movement over time. A sequence of spaces with a beginning, middle, and end, creating a spatial narrative.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Connectedness</h3>
+                    <p>Choice. How many other spaces can be accessed from the path? High connectedness creates integration and social potential.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Procession</h3>
+                    <p>Formalized movement. When the journey is structured for ritual or social significance, establishing a hierarchy of events.</p>
+                </div>
+            </div>
+            
+            <div class="diagram-container">
+                <img src="assets/MATBH_procession.jpg" alt="procession and spatial memory">
+            <br>
+              <small>Procession, anticipation, and reflection.</small>
+            </div>
+        </div>
+
+        <div class="assemblage-section">
+            <h3>02. The Center Chain</h3>
+            <div class="chain-visual">
+                <span class="chain-item">Centrality</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Containment</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Interiority</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Convexity</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item chain-final">Threshold</span>
+            </div>
+
+            <div class="def-stack">
+                <div class="def-item">
+                    <h3>Centrality</h3>
+                    <p>A point that gathers space around it. The location of importance and control (the "Self").</p>
+                </div>
+                <div class="def-item">
+                    <h3>Containment</h3>
+                    <p>The creation of an "Inside" vs. "Outside". We project our own bodily experience of being a container onto rooms.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Interiority</h3>
+                    <p>The depth of containment. Bounded areas within other bounded areas (nesting) increase the sense of protection and separation.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Convexity</h3>
+                    <p>A geometry where everyone sees everyone. A space with no hidden corners, promoting social stability and gathering.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Threshold</h3>
+                    <p>The condition of "Between". A physical volume that negotiates the transition from outside to inside.</p>
+                </div>
+                            <div class="diagram-container">
+                <img src="assets/MATBH_Threshold.jpg" alt="thresholds - deep, shallow, and implied">
+            <br>
+              <small>Threshold conditions in the built environment.</small>
+            </div>
+            </div>
+        </div>
+
+        <div class="assemblage-section">
+            <h3>03. The Identity Chain</h3>
+            <div class="chain-visual">
+                <span class="chain-item">Front</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Identity</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Personification</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item chain-final">Presence</span>
+            </div>
+
+            <div class="def-stack">
+                <div class="def-item">
+                    <h3>Front</h3>
+                    <p>The primary plane. Just as humans have faces, we assign a "front" to objects to determine how to interact with them.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Identity</h3>
+                    <p>Recognition. The abstraction of an object to its essential nature ("What is this thing?").</p>
+                </div>
+                <div class="def-item">
+                    <h3>Personification</h3>
+                    <p>Projection. We attribute human agency, emotion, or posture to inanimate structures ("This building looks aggressive").</p>
+                </div>
+                <div class="def-item">
+                    <h3>Presence</h3>
+                    <p>Influence. When an object is interpreted as actively projecting its values outward into the space, affecting those around it.</p>
+                </div>
+            </div>
+            
+            <div class="diagram-container">
+                <img src="assets/MATBH_Presence.jpg" alt="presence in the built environment">
+            <br>
+              <small>Presence</small>
+            </div>
+        </div>
+
+        <div class="assemblage-section">
+            <h3>04. The Privacy Chain</h3>
+            <div class="chain-visual">
+                <span class="chain-item">Containment</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Communality</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item">Exposure</span>
+                <span class="chain-arrow">&rarr;</span>
+                <span class="chain-item chain-final">Privacy</span>
+            </div>
+
+            <div class="def-stack">
+                <div class="def-item">
+                    <h3>Containment</h3>
+                    <p>The prerequisite for social existence. Defining a shared "here" separate from "there".</p>
+                </div>
+                <div class="def-item">
+                    <h3>Communality</h3>
+                    <p>Shared experience. Spatial configurations that support group cohesion and interaction.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Exposure</h3>
+                    <p>Visibility. To be part of a community is to be seen. High exposure encourages discovery but reduces security.</p>
+                </div>
+                <div class="def-item">
+                    <h3>Privacy</h3>
+                    <p>Control. The ability to limit access. Privacy is not just isolation; it is the power to choose who enters your territory.</p>
+                </div>
+                            <div class="diagram-container">
+                <img src="assets/MATBH_Privacy.jpg" alt="Privacy with levels of access">
+            <br>
+              <small>Privacy based on movement and access</small>
+            </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>V. Core Axioms</h2>
+        <div class="quote-grid">
+            <div class="axiom">
+                "Architecture is not about objects; it is about the human capacity to inhabit space. We design the possibility for events, not just the container."
+                <cite>— On Definition</cite>
+            </div>
+            <div class="axiom">
+                "We do not see the world as it is; we see it as we are. Our biological orientation dictates our architectural understanding before culture ever gets involved."
+                <cite>— On Embodiment</cite>
+            </div>
+            <div class="axiom">
+                "Descriptions like 'happy' or 'aggressive' do not exist in the building. They are interpretations without factual existence, yet they are the shared agreements that make architecture possible."
+                <cite>— On Meaning</cite>
+            </div>
+            <div class="axiom">
+                "Space is not empty. It is a medium of relationship. We do not move through space; we move with space."
+                <cite>— On Space</cite>
+            </div>
+            <div class="axiom">
+                "People do not believe in things that are factual; they believe in things they want to believe in. Speculation captures the imagination to validate a design."
+                <cite>— On Speculation</cite>
+            </div>
+            <div class="axiom">
+                "Hierarchy is not just a size comparison. It is a system of attention. It organizes importance, power, and authority by controlling where we look."
+                <cite>— On Hierarchy</cite>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; Philip D. Plowright. Text extracted and curated from <em>Making Architecture Through Being Human</em> (Routledge).</p>
+        <p><a href="https://www.throughbeinghuman.com">Return to throughbeinghuman.com</a></p>
+    </footer>
+
+</div>
+
+</body>
+</html>
